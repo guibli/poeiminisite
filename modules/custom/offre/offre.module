@@ -1,0 +1,10 @@
+<?php
+/**
+* Implements hook_theme().
+*/
+function offre_theme() {
+  $theme['offre'] = array(
+    'template' => 'annonce',
+  );
+  return $theme;
+}
