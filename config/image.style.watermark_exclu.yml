@@ -1,0 +1,28 @@
+uuid: 49f5571a-90f6-4891-ab11-20b6cefb4fe8
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: watermark_exclu
+label: 'watermark exclu'
+effects:
+  2da7b52f-f36c-4055-b745-31c0882cdb41:
+    uuid: 2da7b52f-f36c-4055-b745-31c0882cdb41
+    id: image_effects_watermark
+    weight: 1
+    data:
+      placement: left-top
+      x_offset: 0
+      y_offset: 0
+      opacity: 100
+      watermark_image: sites/default/files/images
+      watermark_scale: 20
+  96e9e008-d69f-4fe5-9f68-67f8f3ea6f7a:
+    uuid: 96e9e008-d69f-4fe5-9f68-67f8f3ea6f7a
+    id: image_scale
+    weight: 2
+    data:
+      width: 100
+      height: 100
+      upscale: false

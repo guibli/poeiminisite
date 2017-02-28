@@ -1,0 +1,25 @@
+uuid: fa5ebb76-9f5a-4b38-be20-1a36581fd0d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.responsive_slideshow.field_body_desc
+    - field.field.node.responsive_slideshow.field_slide_teaser
+    - field.field.node.responsive_slideshow.field_slideshow_image
+    - node.type.responsive_slideshow
+  module:
+    - user
+_core:
+  default_config_hash: 40sgERYjhwH_kQmuPQZr3A9QwTiClS1YiZaaxA6X7j8
+id: node.responsive_slideshow.teaser
+targetEntityType: node
+bundle: responsive_slideshow
+mode: teaser
+content:
+  links:
+    weight: 10
+hidden:
+  field_body_desc: true
+  field_slide_teaser: true
+  field_slideshow_image: true

@@ -1,0 +1,17 @@
+uuid: 3dd9c632-9bde-43e9-965f-f318467f2701
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sGJZyt7qVVqwvIqqFjKax26LPixFWSmd-3BXNP-G5yg
+name: responsive_slideshow_style
+label: 'Responsive slideshow style'
+effects:
+  responsive_slideshow_imgeffect_image_scale_and_crop:
+    uuid: responsive_slideshow_imgeffect_image_scale_and_crop
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1140
+      height: 300
+      upscale: true

@@ -1,0 +1,21 @@
+uuid: 4446b451-bb4a-42eb-9743-e9fa80754773
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: XkoDmouImYObd0AUdhyGKwQo1GA4nkr7OTvBQpdPLS8
+id: node.field_slide_teaser
+field_name: field_slide_teaser
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
