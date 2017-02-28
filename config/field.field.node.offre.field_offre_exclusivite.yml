@@ -1,0 +1,25 @@
+uuid: 64721fb6-408b-47e4-b032-d45a9c0973f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_exclusivite
+    - node.type.offre
+_core:
+  default_config_hash: yafd270MjIHv826Av2N8nOzTBW16eYgb0emOilch1DI
+id: node.offre.field_offre_exclusivite
+field_name: field_offre_exclusivite
+entity_type: node
+bundle: offre
+label: Exclusivité
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

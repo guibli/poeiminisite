@@ -1,0 +1,20 @@
+uuid: 844ad31b-d6a2-49fe-a698-e807e35b62ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: R5vSX_xGnUnK8Qv0N1qKCrr0KCkC1Tlt6O4EsOu3aZM
+id: node.field_offre_prix
+field_name: field_offre_prix
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

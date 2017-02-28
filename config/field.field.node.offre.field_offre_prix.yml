@@ -1,0 +1,25 @@
+uuid: dc4678d7-72b0-492f-bf46-80b2fc11c0b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_prix
+    - node.type.offre
+_core:
+  default_config_hash: TlaP9v3MFXTTcPDN1drBYbPklHO91L7Qqy98fzO-A_M
+id: node.offre.field_offre_prix
+field_name: field_offre_prix
+entity_type: node
+bundle: offre
+label: Prix
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: €
+field_type: float

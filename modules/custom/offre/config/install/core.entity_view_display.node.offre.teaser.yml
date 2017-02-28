@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.offre.field_offre_exclusivite
+    - field.field.node.offre.field_offre_photos
+    - node.type.offre
+  module:
+    - user
+id: node.offre.teaser
+targetEntityType: node
+bundle: offre
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_offre_exclusivite: true
+  field_offre_photos: true

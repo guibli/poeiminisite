@@ -1,0 +1,22 @@
+uuid: 07fdd5cf-4183-4616-9131-6188af90d310
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Kmcn3djnwkSCy7sfI-fjzxhUrZt6lYGe1ps4s9jdakY
+id: node.field_offre_surface
+field_name: field_offre_surface
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

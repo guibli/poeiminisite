@@ -1,0 +1,23 @@
+uuid: 0ab45a6c-9d4c-4035-bbbe-d4a26d6cda20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_lieu
+    - node.type.offre
+  module:
+    - geolocation
+_core:
+  default_config_hash: t_rO34kMFNQ3OnD0bs9X7bkuqIzfzhxJdaNPN4TTABA
+id: node.offre.field_offre_lieu
+field_name: field_offre_lieu
+entity_type: node
+bundle: offre
+label: Emplacement
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

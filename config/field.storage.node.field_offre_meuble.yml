@@ -1,0 +1,20 @@
+uuid: 1fb75705-bb93-4a58-b943-3490eedb688f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: RKVlw5SNQGOaNa7hNT-cdt_p3doM6vWbS9UQ9etWRqg
+id: node.field_offre_meuble
+field_name: field_offre_meuble
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

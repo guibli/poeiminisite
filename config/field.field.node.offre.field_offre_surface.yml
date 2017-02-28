@@ -1,0 +1,25 @@
+uuid: 503bb6d1-aef2-42d0-9194-7a22a53344c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_surface
+    - node.type.offre
+_core:
+  default_config_hash: MErOT3mDBo87V18hpYIYcH00h6Ptkev3v8GAK8OIVIk
+id: node.offre.field_offre_surface
+field_name: field_offre_surface
+entity_type: node
+bundle: offre
+label: Surface
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' m²'
+field_type: integer

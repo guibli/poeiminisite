@@ -1,0 +1,21 @@
+uuid: 867d1213-fdd9-4720-a801-14c1369e10a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - geolocation
+    - node
+_core:
+  default_config_hash: JLuFcv2uVNTnZO9XRlQxoDenmFUGUxmJpy0rFYuoo9k
+id: node.field_offre_lieu
+field_name: field_offre_lieu
+entity_type: node
+type: geolocation
+settings: {  }
+module: geolocation
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

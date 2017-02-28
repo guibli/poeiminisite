@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_meuble
+    - node.type.offre
+id: node.offre.field_offre_meuble
+field_name: field_offre_meuble
+entity_type: node
+bundle: offre
+label: Meublé
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Meublé
+  off_label: Vide
+field_type: boolean

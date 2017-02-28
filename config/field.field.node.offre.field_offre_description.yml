@@ -1,0 +1,24 @@
+uuid: 4ac45b92-12c7-4524-917d-439c18a04290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_description
+    - node.type.offre
+  module:
+    - text
+_core:
+  default_config_hash: gbyybRvAFPiVgWP7F4uyQ6Oi-ftG0qnv7MKNxZfnvYY
+id: node.offre.field_offre_description
+field_name: field_offre_description
+entity_type: node
+bundle: offre
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

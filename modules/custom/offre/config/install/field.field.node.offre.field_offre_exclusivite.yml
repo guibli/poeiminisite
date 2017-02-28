@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_exclusivite
+    - node.type.offre
+id: node.offre.field_offre_exclusivite
+field_name: field_offre_exclusivite
+entity_type: node
+bundle: offre
+label: Exclusivité
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 94b0230a-1272-49d5-8c02-116284c95aed
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: inGhLWsKVXeO4sv-GP1V5s-XH7kIDlwD2_yuBWdGvIQ
+id: node.field_offre_exclusivite
+field_name: field_offre_exclusivite
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

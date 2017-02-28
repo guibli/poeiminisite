@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_surface
+    - node.type.offre
+id: node.offre.field_offre_surface
+field_name: field_offre_surface
+entity_type: node
+bundle: offre
+label: Surface
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' m²'
+field_type: integer

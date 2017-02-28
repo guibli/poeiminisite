@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_type
+    - node.type.offre
+  module:
+    - options
+id: node.offre.field_offre_type
+field_name: field_offre_type
+entity_type: node
+bundle: offre
+label: 'Type de transaction'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
