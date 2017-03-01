@@ -1,0 +1,21 @@
+uuid: 2a2f1830-c280-4f2c-ab69-465cc07bf09a
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_nom
+field_name: field_nom
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

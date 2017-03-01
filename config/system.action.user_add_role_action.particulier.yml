@@ -1,0 +1,14 @@
+uuid: 93aa952b-0387-45db-b1a0-5b521b13599f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.particulier
+  module:
+    - user
+id: user_add_role_action.particulier
+label: 'Add the Particulier role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: particulier

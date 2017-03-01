@@ -3,10 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_adresse
+    - field.field.user.user.field_civilite
+    - field.field.user.user.field_denomination
+    - field.field.user.user.field_description
+    - field.field.user.user.field_logo
+    - field.field.user.user.field_nom
+    - field.field.user.user.field_prenom
+    - field.field.user.user.field_siret
+    - field.field.user.user.field_site_web
+    - field.field.user.user.field_telephone
+    - field.field.user.user.field_type
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - options
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -15,11 +27,99 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
+  field_adresse:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_civilite:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_denomination:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_description:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_logo:
+    weight: 12
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_nom:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_prenom:
     weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_siret:
+    weight: 17
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_site_web:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_telephone:
+    weight: 14
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_type:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  member_for:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  profile_particulier:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  profile_professionnel:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image
-    weight: 0
+    weight: 1
     settings:
       image_style: thumbnail
       image_link: content

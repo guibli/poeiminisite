@@ -5,8 +5,11 @@ _core:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: ''
+  url: 'http://user4.d8.lab/poeiminisite/themes/contrib/bootstrap/favicon.ico'
   use_default: true
+cdn_jsdelivr_theme: flatly
+table_responsive: '-1'
+table: ''
 features:
   comment_user_picture: true
   comment_user_verification: true

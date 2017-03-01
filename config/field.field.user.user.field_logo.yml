@@ -1,9 +1,9 @@
-uuid: 8584305a-2b0a-4422-8d8d-b84871f3a096
+uuid: 426f045c-c5c0-450e-af79-dba7188f80c8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.user_picture
+    - field.storage.user.field_logo
   module:
     - image
     - multiple_registration
@@ -11,28 +11,26 @@ dependencies:
 third_party_settings:
   multiple_registration:
     user_additional_register_form:
-      100: '100'
-      professionnel: 0
-_core:
-  default_config_hash: cL7i1kgJvlJa6H00f0E_fZ2KdD1ag0ASpLts0K-KNII
-id: user.user.user_picture
-field_name: user_picture
+      professionnel: professionnel
+      100: 0
+id: user.user.field_logo
+field_name: field_logo
 entity_type: user
 bundle: user
-label: Picture
-description: 'Your virtual face or picture.'
+label: Logo
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
+  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: '30 KB'
-  max_resolution: 85x85
+  max_filesize: ''
+  max_resolution: ''
   min_resolution: ''
-  alt_field: false
-  alt_field_required: false
+  alt_field: true
+  alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:
