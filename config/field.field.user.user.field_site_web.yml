@@ -1,0 +1,26 @@
+uuid: 9cd6f4d3-a5f1-40ee-b375-550bed0b940a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_site_web
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form:
+      professionnel: professionnel
+      100: 0
+id: user.user.field_site_web
+field_name: field_site_web
+entity_type: user
+bundle: user
+label: 'Site web'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

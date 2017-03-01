@@ -1,0 +1,27 @@
+uuid: cfb51d5e-250e-439c-bef5-887da057ff9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_civilite
+field_name: field_civilite
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Homme
+      label: Homme
+    -
+      value: Femme
+      label: Femme
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

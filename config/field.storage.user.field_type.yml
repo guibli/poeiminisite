@@ -1,0 +1,27 @@
+uuid: 502b40fe-777b-4fb5-9c7f-36ac0963992a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_type
+field_name: field_type
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1 - Client'
+      label: '1 - Client'
+    -
+      value: '2  - Vendeur/Loueur'
+      label: '2  - Vendeur/Loueur'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

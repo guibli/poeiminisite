@@ -1,0 +1,22 @@
+uuid: eb78fa92-384f-45d9-b211-02479c7b9fd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - mybootstrap
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: mybootstrap_help
+theme: mybootstrap
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

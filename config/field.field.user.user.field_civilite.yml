@@ -1,0 +1,27 @@
+uuid: ee91f3ec-2038-42cb-92c3-dd7c7ebb719d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_civilite
+  module:
+    - multiple_registration
+    - options
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form:
+      100: '100'
+      professionnel: 0
+id: user.user.field_civilite
+field_name: field_civilite
+entity_type: user
+bundle: user
+label: Civilité
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

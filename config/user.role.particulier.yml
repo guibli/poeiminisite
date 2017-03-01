@@ -1,0 +1,9 @@
+uuid: d82055d0-0799-42cb-af4e-13c604c5143c
+langcode: en
+status: true
+dependencies: {  }
+id: particulier
+label: Particulier
+weight: 3
+is_admin: null
+permissions: {  }

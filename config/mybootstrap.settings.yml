@@ -1,15 +1,11 @@
-schemas:
-  bootstrap: 8000
+cdn_provider: ''
 _core:
-  default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
+  default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
   url: 'http://user4.d8.lab/poeiminisite/themes/contrib/bootstrap/favicon.ico'
   use_default: true
-cdn_jsdelivr_theme: flatly
-table_responsive: '-1'
-table: ''
 features:
   comment_user_picture: true
   comment_user_verification: true
@@ -19,3 +15,6 @@ logo:
   path: ''
   url: ''
   use_default: true
+schemas:
+  bootstrap: 8000
+  mybootstrap: 8000

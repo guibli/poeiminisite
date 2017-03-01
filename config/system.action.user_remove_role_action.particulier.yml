@@ -1,0 +1,14 @@
+uuid: e2b44b5e-8692-4cc7-b5c3-44644e3b4dc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.particulier
+  module:
+    - user
+id: user_remove_role_action.particulier
+label: 'Remove the Particulier role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: particulier
