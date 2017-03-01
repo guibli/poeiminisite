@@ -1,0 +1,169 @@
+<?php
+
+/**
+ * @file
+ * Contains multiple_registration.module
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
+use Drupal\multiple_registration\Controller\MultipleRegistrationController;
+
+/**
+ * Implements hook_help().
+ */
+function multiple_registration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the multiple_registration module.
+    case 'help.page.multiple_registration':
+      $path = dirname(__FILE__) . '/README.txt';
+      if (file_exists($path)) {
+        $readme = file_get_contents($path);
+      }
+
+      if (!isset($readme)) {
+        return NULL;
+      }
+      $output = '<pre>' . $readme . '</pre>';
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function multiple_registration_theme() {
+  $theme = [];
+  return $theme;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function multiple_registration_permission() {
+  return array(
+    'administer multiple_registration' => array(
+      'title' => t('Administer multiple registration'),
+      'description' => t('Configure multiple registration module'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_operation_alter().
+ */
+function multiple_registration_entity_operation_alter(array &$operations, EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'user_role') {
+    if (\Drupal::service('router.route_provider')->getRouteByName("multiple_registration.create_registration_page_form")) {
+      $available_roles = \Drupal::service('multiple_registration.service')->getAvailableRoles();
+      if (!in_array($entity->id(), array_keys($available_roles))) {
+        return;
+      }
+      $operations['test_operation'] = [
+        'title' => t('Add own registration page'),
+        'url' => Url::fromRoute("multiple_registration.create_registration_page_form", ['rid' => $entity->id()]),
+        'weight' => 50,
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function multiple_registration_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getTargetEntityTypeId() == 'user' && $field_definition instanceof Drupal\Core\Config\Entity\ThirdPartySettingsInterface) {
+    $field_roles = $field_definition->getThirdPartySetting('multiple_registration', 'user_additional_register_form');
+    if (!empty($field_roles)) {
+      // If nothing was selected.
+      if (max($field_roles) === 0) {
+        return;
+      }
+      $element['#access'] = MultipleRegistrationController::checkFieldAccess($field_roles);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function multiple_registration_form_field_config_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $field = $form_state->getFormObject()->getEntity();
+  $instance = $field;
+
+  if ($instance->get('entity_type') == 'user' && !$instance->isDeleted() && !$instance->isReadonly()) {
+
+    $reg_pages = \Drupal::service('multiple_registration.service')->getRegistrationPages();
+    if ($reg_pages) {
+      $options[MultipleRegistrationController::MULTIPLE_REGISTRATION_GENERAL_REGISTRATION_ID] = t('General registered users');
+      foreach ($reg_pages as $rid => $page) {
+        $options[$rid] = t('Users with %role role', array('%role' => $page['role_name']));
+      }
+      $descr = t('Specify which of options are actual for this field. If nothing is selected, field is available for all variants.');
+      $def_val = $instance->getThirdPartySetting('multiple_registration', 'user_additional_register_form');
+
+      $form['field']['third_party_settings']['multiple_registration'] = array(
+        '#type' => 'checkboxes',
+        '#title' => t('This field is needed for:'),
+        '#description' => $descr,
+        '#default_value' => $def_val,
+        '#options' => $options,
+      );
+      $form['actions']['submit']['#submit'][] = 'multiple_registration_field_config_form_submit';
+    }
+  }
+}
+
+/**
+ * Form submit to save additional field settings.
+ *
+ * @param $form
+ *
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function multiple_registration_field_config_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $data = $form_state->getValue('multiple_registration');
+  $field = $form_state->getFormObject()->getEntity();
+  $field->setThirdPartySetting('multiple_registration', 'user_additional_register_form', $data);
+  $field->save();
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function multiple_registration_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $route_match = \Drupal::routeMatch();
+  $route = $route_match->getRouteName();
+  if ($route == 'multiple_registration.role_registration_page') {
+    $form['rid'] = array('#type' => 'value', '#value' => $route_match->getParameter('rid'));
+    $form['actions']['submit']['#validate'][] = 'multiple_registration_user_register_form_validate';
+  }
+}
+
+/**
+ * Extra form validation handler for form_user_register_form().
+ */
+function multiple_registration_user_register_form_validate(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $rid = $form_state->getValue('rid');
+  // Force enable the role to user.
+  $roles = $form_state->setValue(array('roles', $rid), $rid);
+}
+
+/**
+ *  Implements hook_block_view_BASE_BLOCK_ID_alter().
+ */
+function multiple_registration_block_view_user_login_block_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+  if (isset($build['content']['user_links'])) {
+    if (\Drupal::config('user.settings')->get('register') != USER_REGISTER_ADMINISTRATORS_ONLY) {
+      $reg_pages = \Drupal::service('multiple_registration.service')->getRegistrationPages();
+      foreach ($reg_pages as $rid => $role) {
+        $uri = 'base:' . $role['url'];
+        $reg_url = Url::fromUri($uri);
+        $reg_link = \Drupal::l(t('Create new @role account', array('@role' => $role['role_name'])), $reg_url);
+        $build['content']['user_links']['#items']['multiple_registration_' . $rid] = $reg_link;
+      }
+    }
+  }
+}
