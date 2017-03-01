@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type_de_bien
+  module:
+    - facets
+  theme:
+    - bootstrap
+id: typedebien_2
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:type_de_bien'
+settings:
+  id: 'facet_block:type_de_bien'
+  label: 'Type de bien'
+  provider: facets
+  label_display: visible
+visibility: {  }

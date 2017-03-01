@@ -1,0 +1,22 @@
+uuid: 5bdc7fbc-ff5f-4b89-8a1a-08f46e1636a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.nombre_de_pieces
+  module:
+    - facets
+  theme:
+    - mybootstrap
+id: nombredepieces
+theme: mybootstrap
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'facet_block:nombre_de_pieces'
+settings:
+  id: 'facet_block:nombre_de_pieces'
+  label: 'Nombre de pièces'
+  provider: facets
+  label_display: visible
+visibility: {  }

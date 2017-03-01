@@ -11,7 +11,7 @@ _core:
 id: mybootstrap_branding
 theme: mybootstrap
 region: navigation
-weight: 0
+weight: -8
 provider: null
 plugin: system_branding_block
 settings:

@@ -1,0 +1,28 @@
+uuid: f9328748-412f-434f-8959-06aefc020e93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meuble
+    - node.type.offre
+    - taxonomy.vocabulary.meuble
+id: node.offre.field_meuble
+field_name: field_meuble
+entity_type: node
+bundle: offre
+label: 'Meublé / vide '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      meuble: meuble
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

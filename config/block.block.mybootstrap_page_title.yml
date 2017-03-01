@@ -9,7 +9,7 @@ _core:
 id: mybootstrap_page_title
 theme: mybootstrap
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

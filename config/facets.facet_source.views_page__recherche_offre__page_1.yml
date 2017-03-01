@@ -1,0 +1,8 @@
+uuid: null
+langcode: en
+status: true
+dependencies: {  }
+id: views_page__recherche_offre__page_1
+name: 'views_page:recherche_offre__page_1'
+filter_key: null
+url_processor: query_string

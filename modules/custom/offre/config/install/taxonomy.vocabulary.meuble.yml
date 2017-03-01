@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Meuble
+vid: meuble
+description: 'Vide / meublé'
+hierarchy: 0
+weight: 0

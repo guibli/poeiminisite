@@ -1,13 +1,16 @@
+uuid: 99db2fb8-7b37-4a42-a17a-06a67cd6bcf2
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_offre_meuble
-field_name: field_offre_meuble
+    - taxonomy
+id: node.field_meuble
+field_name: field_meuble
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

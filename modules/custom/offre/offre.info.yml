@@ -3,6 +3,9 @@ description: 'Offre immobiliere'
 type: module
 core: 8.x
 dependencies:
+  - block
+  - colorbox
+  - facets
   - field
   - file
   - geolocation
@@ -11,5 +14,9 @@ dependencies:
   - node
   - options
   - path
+  - search_api
+  - search_api_db
+  - taxonomy
   - text
   - user
+  - views

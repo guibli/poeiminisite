@@ -1,0 +1,22 @@
+uuid: 4c837729-12e6-44c1-8c5e-9c91c6754cb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type_de_transaction
+  module:
+    - facets
+  theme:
+    - bootstrap
+id: typedetransaction_2
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:type_de_transaction'
+settings:
+  id: 'facet_block:type_de_transaction'
+  label: 'Type de transaction'
+  provider: facets
+  label_display: visible
+visibility: {  }

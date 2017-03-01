@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type_de_transaction
+  module:
+    - facets
+  theme:
+    - mybootstrap
+id: typedetransaction
+theme: mybootstrap
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'facet_block:type_de_transaction'
+settings:
+  id: 'facet_block:type_de_transaction'
+  label: 'Type de transaction'
+  provider: facets
+  label_display: visible
+visibility: {  }

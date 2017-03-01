@@ -1,15 +1,17 @@
+uuid: a20b3865-af50-4850-95bc-fa57ea578007
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_offre_pieces
-field_name: field_offre_pieces
+id: node.field_ville
+field_name: field_ville
 entity_type: node
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

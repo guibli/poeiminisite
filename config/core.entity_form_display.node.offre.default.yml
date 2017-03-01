@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.offre.field_meuble
     - field.field.node.offre.field_nombre_de_pieces
     - field.field.node.offre.field_offre_description
     - field.field.node.offre.field_offre_exclusivite
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.offre.field_offre_surface
     - field.field.node.offre.field_offre_type_de_bien
     - field.field.node.offre.field_type_de_transaction
+    - field.field.node.offre.field_ville
     - image.style.thumbnail
     - node.type.offre
   module:
@@ -31,6 +33,14 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_meuble:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_nombre_de_pieces:
     weight: 10
     settings:
@@ -40,7 +50,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
   field_offre_description:
-    weight: 14
+    weight: 15
     settings:
       rows: 9
       summary_rows: 3
@@ -54,7 +64,7 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
   field_offre_lieu:
-    weight: 13
+    weight: 14
     settings:
       populate_address_field: ''
       target_address_field: null
@@ -95,13 +105,13 @@ content:
     third_party_settings: {  }
     type: image_image
   field_offre_prix:
-    weight: 11
+    weight: 12
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
   field_offre_surface:
-    weight: 12
+    weight: 13
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -122,6 +132,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
+  field_ville:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   path:
     type: path
     weight: 5

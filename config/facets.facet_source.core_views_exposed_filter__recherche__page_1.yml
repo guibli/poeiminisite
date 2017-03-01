@@ -1,0 +1,8 @@
+uuid: null
+langcode: en
+status: true
+dependencies: {  }
+id: core_views_exposed_filter__recherche__page_1
+name: 'core_views_exposed_filter:recherche__page_1'
+filter_key: ''
+url_processor: core_views_url_processor

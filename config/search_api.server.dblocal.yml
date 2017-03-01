@@ -1,0 +1,18 @@
+uuid: 2d378d34-ffb9-4dc3-a314-96003b36f09c
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: dblocal
+name: dblocal
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  database_text: ''
+  min_chars: 1
+  partial_matches: true
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true
