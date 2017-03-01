@@ -1,4 +1,4 @@
-uuid: d734abb1-01c5-4a1c-801f-c1eff1d5e5f3
+uuid: 47604834-5a07-4cd8-9ebe-1129c20bec93
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - facets
   theme:
     - bootstrap
-id: meublevide_2
+id: meublevide_3
 theme: bootstrap
 region: sidebar_first
 weight: 0
