@@ -1,0 +1,28 @@
+uuid: 892ab236-8368-4e02-b56e-0db8c429d549
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_type_de_bien
+    - node.type.offre
+    - taxonomy.vocabulary.type_de_bien
+id: node.offre.field_offre_type_de_bien
+field_name: field_offre_type_de_bien
+entity_type: node
+bundle: offre
+label: 'Type de bien'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      type_de_bien: type_de_bien
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

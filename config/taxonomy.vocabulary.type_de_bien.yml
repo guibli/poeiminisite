@@ -1,0 +1,9 @@
+uuid: 13342fef-038c-4cfd-b2b6-9d9faea639e6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Type de bien'
+vid: type_de_bien
+description: 'appart, maison ,loft'
+hierarchy: 0
+weight: 0

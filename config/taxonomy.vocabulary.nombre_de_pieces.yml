@@ -1,0 +1,9 @@
+uuid: a1447013-bc27-4bd1-9dae-2cd43f1e633f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Nombre de pieces'
+vid: nombre_de_pieces
+description: 'Nombre de pieces'
+hierarchy: 0
+weight: 0

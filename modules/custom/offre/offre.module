@@ -2,7 +2,7 @@
 
 function offre_theme_suggestions_offre(array $variables) {
   $suggestions = array();
-  $offre = $variables['elements']['#offre'];
+
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
 
   $suggestions[] = 'offre__' . $sanitized_view_mode;

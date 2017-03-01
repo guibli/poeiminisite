@@ -1,0 +1,28 @@
+uuid: 8328e52c-d13e-4ccb-bb1b-64bd9129fd15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_de_pieces
+    - node.type.offre
+    - taxonomy.vocabulary.nombre_de_pieces
+id: node.offre.field_nombre_de_pieces
+field_name: field_nombre_de_pieces
+entity_type: node
+bundle: offre
+label: 'Nombre de pièces'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      nombre_de_pieces: nombre_de_pieces
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

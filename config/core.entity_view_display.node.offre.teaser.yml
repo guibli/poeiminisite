@@ -7,12 +7,11 @@ dependencies:
     - field.field.node.offre.field_offre_description
     - field.field.node.offre.field_offre_exclusivite
     - field.field.node.offre.field_offre_lieu
-    - field.field.node.offre.field_offre_meuble
     - field.field.node.offre.field_offre_photos
-    - field.field.node.offre.field_offre_pieces
     - field.field.node.offre.field_offre_prix
     - field.field.node.offre.field_offre_surface
-    - field.field.node.offre.field_offre_type
+    - field.field.node.offre.field_offre_type_de_bien
+    - field.field.node.offre.field_type_de_transaction
     - node.type.offre
   module:
     - user
@@ -29,9 +28,8 @@ hidden:
   field_offre_description: true
   field_offre_exclusivite: true
   field_offre_lieu: true
-  field_offre_meuble: true
   field_offre_photos: true
-  field_offre_pieces: true
   field_offre_prix: true
   field_offre_surface: true
-  field_offre_type: true
+  field_offre_type_de_bien: true
+  field_type_de_transaction: true

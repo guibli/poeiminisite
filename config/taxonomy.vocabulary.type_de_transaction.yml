@@ -1,0 +1,9 @@
+uuid: 929154fb-9ad5-46a6-a0e4-72a646ab0fc8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Type de transaction'
+vid: type_de_transaction
+description: 'vente,viager ou location '
+hierarchy: 0
+weight: 0

@@ -3,21 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.offre.field_nombre_de_pieces
     - field.field.node.offre.field_offre_description
     - field.field.node.offre.field_offre_exclusivite
     - field.field.node.offre.field_offre_lieu
-    - field.field.node.offre.field_offre_meuble
     - field.field.node.offre.field_offre_photos
-    - field.field.node.offre.field_offre_pieces
     - field.field.node.offre.field_offre_prix
     - field.field.node.offre.field_offre_surface
-    - field.field.node.offre.field_offre_type
+    - field.field.node.offre.field_offre_type_de_bien
+    - field.field.node.offre.field_type_de_transaction
     - image.style.responsive_slideshow_style
     - node.type.offre
   module:
     - colorbox
     - geolocation
-    - options
     - text
     - user
 _core:
@@ -27,6 +26,13 @@ targetEntityType: node
 bundle: offre
 mode: default
 content:
+  field_nombre_de_pieces:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_offre_description:
     weight: 7
     label: hidden
@@ -48,15 +54,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
-  field_offre_meuble:
-    weight: 8
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
   field_offre_photos:
     weight: 1
     label: hidden
@@ -70,14 +67,6 @@ content:
       colorbox_caption_custom: ''
     third_party_settings: {  }
     type: colorbox
-  field_offre_pieces:
-    weight: 6
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
   field_offre_prix:
     weight: 4
     label: above
@@ -96,12 +85,20 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
-  field_offre_type:
-    weight: 3
+  field_offre_type_de_bien:
+    weight: 10
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: list_default
+    type: entity_reference_label
+  field_type_de_transaction:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   links:
     weight: 0
     settings: {  }

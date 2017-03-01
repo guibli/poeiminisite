@@ -1,0 +1,9 @@
+uuid: d555f39b-eab5-4ec9-a4d5-d1a0d6542e94
+langcode: en
+status: true
+dependencies: {  }
+name: Meuble
+vid: meuble
+description: 'Vide / meublé'
+hierarchy: 0
+weight: 0

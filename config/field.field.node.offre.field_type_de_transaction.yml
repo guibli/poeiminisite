@@ -1,0 +1,28 @@
+uuid: e021fa0f-73d0-4b98-9325-15de9f54d809
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_de_transaction
+    - node.type.offre
+    - taxonomy.vocabulary.type_de_transaction
+id: node.offre.field_type_de_transaction
+field_name: field_type_de_transaction
+entity_type: node
+bundle: offre
+label: 'Type de transaction'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      type_de_transaction: type_de_transaction
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
