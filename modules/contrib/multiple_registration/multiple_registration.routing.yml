@@ -1,0 +1,31 @@
+multiple_registration.multiple_registration_list_index:
+  path: 'admin/config/people/multiple_registration'
+  defaults:
+    _controller: '\Drupal\multiple_registration\Controller\MultipleRegistrationController::index'
+    _title: 'Multiple registration pages'
+  requirements:
+    _permission: 'administer multiple_registration'
+
+multiple_registration.create_registration_page_form:
+  path: 'admin/config/people/multiple_registration/{rid}/add'
+  defaults:
+    _form: '\Drupal\multiple_registration\Form\CreateRegistrationPageForm'
+    _title: 'Create Registration Page'
+  requirements:
+    _permission: 'administer multiple_registration'
+    
+multiple_registration.delete_registration_page_form:
+  path: 'admin/config/people/multiple_registration/{rid}/remove'
+  defaults:
+    _form: '\Drupal\multiple_registration\Form\DeleteRegistrationPageForm'
+    _title: 'Delete Registration Page'
+  requirements:
+    _permission: 'administer multiple_registration'
+    
+multiple_registration.role_registration_page:
+  path: 'user/register/{rid}'
+  defaults:
+    _entity_form: 'user.register'
+    _title_callback: '\Drupal\multiple_registration\Controller\MultipleRegistrationController::getRegisterPageTitle'
+  requirements:
+    _access_user_register: 'TRUE'
