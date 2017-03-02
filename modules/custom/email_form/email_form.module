@@ -1,0 +1,37 @@
+<?php
+
+function email_form_mail($key,&$message,$param){
+
+  switch ($key){
+    case 'email_form':
+      $message['from'] = 'guillaume.bleriot@gmail.com';
+      $message['subject'] = t('An article has changed');
+      $message['body'][] =t('The article @title has changed. <a href="@link" target="_blank">Click here to check it out</a>',
+                              array('@title'=>$param['title'],'@link'=>$param['link'])
+                            );
+      break;
+  }
+}
+
+function email_form_node_update(Drupal\Core\Entity\EntityInterface $entity)
+{
+  if($entity->bundle()=='article') {
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    //Check for subscriber
+    $query = \Drupal::database()
+      ->select('email_form', 'ef')
+      ->fields('ef', array('nid', 'email'))
+      ->condition('nid', $entity->id())
+      ->execute();
+
+    $result = $query->fetchAll();
+
+    $options = ['absolute' => TRUE];
+    $url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()],$options);
+    $url = $url->toString();
+
+    foreach ($result as $user) {
+      $mailManager->mail('email_form', 'email_form', $user->email, '', $params = array('link' => $url,'title'=>$entity->getTitle()), $reply = NULL, $send = TRUE);
+    }
+  }
+}

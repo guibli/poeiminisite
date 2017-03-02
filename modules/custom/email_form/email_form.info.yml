@@ -1,0 +1,6 @@
+name: Email form
+description: "Email form"
+type: module
+core: 8.x
+version: 8.x-1.0
+dependency: reusable_forms

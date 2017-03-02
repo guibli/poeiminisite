@@ -1,0 +1,29 @@
+<?php
+use Drupal\Core\Database\Database;
+function email_form_schema(){
+  $schema['email_form'] = array(
+    'description' => 'email_form',
+    'fields' => array(
+      'hid' => array(
+        'description' => 'Primary Key',
+        'type'        => 'serial',
+        'unsigned'    => TRUE,
+        'not null'    => TRUE,
+      ),
+      'nid' => array(
+        'description' => 'Node ID.',
+        'type'        => 'int',
+        'unsigned'    => TRUE,
+        'not null'    => TRUE,
+      ),
+      'email' => array(
+        'description' => 'usermail',
+        'length' => 255,
+        'type'        => 'varchar'
+      ),
+    ),
+    'primary key' => array('hid'),
+    'indexes' => array('nid' => array('nid')),
+  );
+  return $schema;
+}
