@@ -4,9 +4,9 @@ function email_form_mail($key,&$message,$param){
 
   switch ($key){
     case 'email_form':
-      $message['from'] = 'guillaume.bleriot@gmail.com';
-      $message['subject'] = t('An article has changed');
-      $message['body'][] =t('The article @title has changed. <a href="@link" target="_blank">Click here to check it out</a>',
+      $message['from'] = 'minisite@poei.com';
+      $message['subject'] = t('Une offre aété modifiée');
+      $message['body'][] =t('L offre @title a changée. <a href="@link" target="_blank">Consulter</a>',
                               array('@title'=>$param['title'],'@link'=>$param['link'])
                             );
       break;
@@ -15,7 +15,9 @@ function email_form_mail($key,&$message,$param){
 
 function email_form_node_update(Drupal\Core\Entity\EntityInterface $entity)
 {
-  if($entity->bundle()=='article') {
+
+  if($entity->bundle()=='offre') {
+
     $mailManager = \Drupal::service('plugin.manager.mail');
     //Check for subscriber
     $query = \Drupal::database()
