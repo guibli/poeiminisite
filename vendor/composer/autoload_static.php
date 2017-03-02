@@ -16,19 +16,16 @@ class ComposerStaticInitDrupal8
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        'd9d39f82a605ebe5918f683dd402334c' => __DIR__ . '/..' . '/padraic/humbug_get_contents/src/function.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         '15a4f52ecde7234868b7009f6257de9a' => __DIR__ . '/..' . '/drupal/console-core/src/constants.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
-        'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
-            'phpseclib\\' => 10,
             'phpDocumentor\\Reflection\\' => 25,
         ),
         'Z' => 
@@ -95,11 +92,6 @@ class ComposerStaticInitDrupal8
         array (
             'Masterminds\\' => 12,
         ),
-        'H' => 
-        array (
-            'Humbug\\SelfUpdate\\' => 18,
-            'Humbug\\' => 7,
-        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -140,10 +132,6 @@ class ComposerStaticInitDrupal8
     );
 
     public static $prefixDirsPsr4 = array (
-        'phpseclib\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
-        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -321,14 +309,6 @@ class ComposerStaticInitDrupal8
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
-        ),
-        'Humbug\\SelfUpdate\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/padraic/phar-updater/src',
-        ),
-        'Humbug\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/padraic/humbug_get_contents/src/Humbug',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
