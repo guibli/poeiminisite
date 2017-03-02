@@ -7,6 +7,8 @@ dependencies:
     - field.storage.node.field_nombre_de_pieces
     - field.storage.node.field_offre_type_de_bien
     - field.storage.node.field_type_de_transaction
+    - field.storage.node.field_offre_surface
+    - field.storage.node.field_offre_prix
     - search_api.server.dblocal
   module:
     - search_api
@@ -48,6 +50,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_type_de_transaction
+  field_offre_surface:
+    label: Surface
+    datasource_id: 'entity:node'
+    property_path: field_offre_surface
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_offre_surface
+  field_offre_prix:
+    label: Prix
+    datasource_id: 'entity:node'
+    property_path: field_offre_prix
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_offre_prix
 datasource_settings:
   'entity:node':
     bundles:
