@@ -11,14 +11,14 @@ name: 'Meublé / vide '
 url_alias: meuble_vide_
 weight: 0
 min_count: 1
-show_only_one_result: false
+show_only_one_result: true
 field_identifier: field_meuble
 facet_source_id: 'views_page:recherche_offre__page_1'
 widget:
-  type: links
+  type: dropdown
   config:
     show_numbers: true
-    soft_limit: 0
+    default_option_label: Choose
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false

@@ -42,7 +42,9 @@ function search_save_theme() {
  */
 function search_save_views_pre_render(ViewExecutable $view)
 {
-  if($view->id()=='recherche_offre' && $view->current_display == 'page_1'){
-   /* kint($view);*/
+  $user = get_current_user();
+  
+  if($view->id()=='recherche_offre' && $view->current_display == 'page_1' && $user !== 0){
+   kint($user);
   }
 }

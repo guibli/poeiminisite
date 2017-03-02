@@ -1,0 +1,50 @@
+uuid: a946c16c-dad9-46cb-8137-556473c82a71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_address
+    - node.type.offre
+  module:
+    - address
+id: node.offre.field_offre_address
+field_name: field_offre_address
+entity_type: node
+bundle: offre
+label: Address
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    langcode: null
+    country_code: FR
+    administrative_area: ''
+    locality: ''
+    dependent_locality: ''
+    postal_code: ''
+    sorting_code: ''
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: ''
+    family_name: ''
+default_value_callback: ''
+settings:
+  available_countries:
+    FR: FR
+  fields:
+    locality: locality
+    administrativeArea: '0'
+    dependentLocality: '0'
+    postalCode: '0'
+    sortingCode: '0'
+    addressLine1: '0'
+    addressLine2: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

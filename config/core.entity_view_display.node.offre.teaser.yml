@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.offre.field_offre_surface
     - field.field.node.offre.field_offre_type_de_bien
     - field.field.node.offre.field_type_de_transaction
-    - field.field.node.offre.field_ville
     - node.type.offre
   module:
     - user
@@ -40,5 +39,4 @@ hidden:
   field_offre_surface: true
   field_offre_type_de_bien: true
   field_type_de_transaction: true
-  field_ville: true
   reusable_form: true
