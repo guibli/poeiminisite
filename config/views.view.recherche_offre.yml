@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_ville
     - image.style.thumbnail
     - search_api.index.offre
+    - system.menu.main
   module:
     - image
     - search_api
@@ -312,6 +313,15 @@ display:
     display_options:
       display_extenders: {  }
       path: recherche-offre
+      menu:
+        type: normal
+        title: Recherche
+        description: Rechercheoffre
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: 0
       contexts:

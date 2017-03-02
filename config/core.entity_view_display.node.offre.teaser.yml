@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.offre.field_meuble
+    - field.field.node.offre.field_nombre_de_pieces
     - field.field.node.offre.field_offre_description
     - field.field.node.offre.field_offre_exclusivite
     - field.field.node.offre.field_offre_lieu
@@ -12,6 +14,7 @@ dependencies:
     - field.field.node.offre.field_offre_surface
     - field.field.node.offre.field_offre_type_de_bien
     - field.field.node.offre.field_type_de_transaction
+    - field.field.node.offre.field_ville
     - node.type.offre
   module:
     - user
@@ -24,7 +27,11 @@ mode: teaser
 content:
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_meuble: true
+  field_nombre_de_pieces: true
   field_offre_description: true
   field_offre_exclusivite: true
   field_offre_lieu: true
@@ -33,3 +40,5 @@ hidden:
   field_offre_surface: true
   field_offre_type_de_bien: true
   field_type_de_transaction: true
+  field_ville: true
+  reusable_form: true
