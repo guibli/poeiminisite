@@ -1,0 +1,8 @@
+search_save.search_save_form:
+  path: '/search_save'
+  defaults:
+    _form: '\Drupal\search_save\Form\SearchSaveForm'
+    _title: 'SearchSaveForm'
+  requirements:
+    _access: 'TRUE'
+  

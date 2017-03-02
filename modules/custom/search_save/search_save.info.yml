@@ -1,0 +1,7 @@
+name: search_save
+type: module
+description: Sauvegarde des recherches
+core: 8.x
+package: Custom
+dependencies:
+  - views

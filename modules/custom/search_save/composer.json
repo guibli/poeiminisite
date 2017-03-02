@@ -1,0 +1,14 @@
+{
+  "name": "drupal/search_save",
+  "type": "drupal-module",
+  "description": "Sauvegarde des recherches",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/search_save",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/search_save",
+    "source": "http://cgit.drupalcode.org/search_save"
+  },
+  "require": { }
+}

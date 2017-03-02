@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains search_save.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+/**
+ * Implements hook_help().
+ */
+function search_save_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the search_save module.
+    case 'help.page.search_save':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Sauvegarde des recherches') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function search_save_theme() {
+  return [
+    'search_save' => [
+      'template' => 'search_save',
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_pre_view().
+ * Check if user is logged.
+ *
+ */
+function search_save_views_pre_render(ViewExecutable $view)
+{
+  if($view->id()=='recherche_offre' && $view->current_display == 'page_1'){
+    kint($view);
+  }
+}

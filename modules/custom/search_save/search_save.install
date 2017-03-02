@@ -1,0 +1,16 @@
+<?php
+
+function annonce_schema(){
+  $schema['search_save'] = array(
+    'description' => 'Stores saved search per user.',
+    'fields' => array(
+      'id'       => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+      'uid'       => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
+      'url'      => array('type' => 'varchar','length' => 32,'not null' => TRUE, 'default' => ''),
+      'title'     => array('type' => 'varchar','length' => 255,'not null' => TRUE, 'default' => ''),
+    ),
+    'primary key' => array('hid'),
+    'indexes' => array('nid' => array('nid')),
+  );
+  return $schema;
+}
