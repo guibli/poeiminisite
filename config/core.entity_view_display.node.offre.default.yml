@@ -28,6 +28,10 @@ targetEntityType: node
 bundle: offre
 mode: default
 content:
+  addtoany:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
   field_meuble:
     weight: 13
     label: inline
@@ -143,6 +147,10 @@ content:
     type: string
   links:
     weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  reusable_form:
+    weight: 100
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

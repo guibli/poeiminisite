@@ -1,4 +1,5 @@
 module:
+  addtoany: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
@@ -36,6 +37,7 @@ module:
   image_effects: 0
   kint: 0
   link: 0
+  liste: 0
   menu_ui: 0
   multiple_registration: 0
   node: 0
@@ -61,6 +63,7 @@ module:
   update: 0
   user: 0
   views_slideshow: 0
+  views_slideshow_cycle: 0
   views_ui: 0
   webform: 0
   webprofiler: 0

@@ -1,0 +1,7 @@
+liste.liste-liste-offre:
+  path: '/liste/liste-offre'
+  defaults:
+    _titre: 'liste offre'
+    _controller: '\Drupal\liste\Controller\ListeOffreController::content'
+  requirements:
+    _access: 'TRUE'
