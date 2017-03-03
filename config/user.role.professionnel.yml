@@ -6,4 +6,8 @@ id: professionnel
 label: Professionnel
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'switch users'
+  - 'create offre content'
+  - 'delete own offre content'
+  - 'edit own offre content'
