@@ -61,7 +61,7 @@ function search_save_views_pre_view(ViewExecutable $views, $display_id, array &$
 				'empty' => TRUE,
 				'tokenize' => FALSE,
 				'content' => '<a class="use-ajax" data-dialog-type="modal" 
-													href="/poeiminisite/search_save/form/search_save_front?url=">Sauvegarder la recherche</a>',
+													href="/poeiminisite/search_save/form/search_save_front">Sauvegarder la recherche</a>',
 				'plugin_id' => 'text_custom',
 			);
 			$views->setHandler($view[1], 'header', 'search_save', $options);
