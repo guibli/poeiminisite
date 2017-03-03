@@ -1,0 +1,33 @@
+uuid: a9681a60-4f93-47f0-a4ea-bfac51f57d1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geolocation_demo_single
+    - node.type.geolocation_default_article
+  enforced:
+    module:
+      - geolocation_demo
+  module:
+    - geolocation
+_core:
+  default_config_hash: prW4dVuFbePol-J-L_ekQ03jD3DD60PdF7dBKR-3IgU
+id: node.geolocation_default_article.field_geolocation_demo_single
+field_name: field_geolocation_demo_single
+entity_type: node
+bundle: geolocation_default_article
+label: 'Geolocation Demo Single'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    lat: '43.10930166384064'
+    lng: '131.89649105072021'
+    lat_sin: null
+    lat_cos: null
+    lng_rad: null
+    data: null
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

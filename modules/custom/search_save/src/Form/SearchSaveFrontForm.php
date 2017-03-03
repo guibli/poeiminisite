@@ -1,33 +1,33 @@
 <?php
 
 namespace Drupal\search_save\Form;
-
+use Symfony\Component\HttpFoundation\RequestStack;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Session\AccountProxy;
 
 /**
- * Class SearchSaveForm.
+ * Class SearchSaveFrontForm.
  *
  * @package Drupal\search_save\Form
  */
-class SearchSaveForm extends FormBase {
+class SearchSaveFrontForm extends FormBase {
 
-  /**
-   * Drupal\Core\Session\AccountProxy definition.
-   *
-   * @var \Drupal\Core\Session\AccountProxy
-   */
+  protected $currentRequest;
   protected $currentUser;
+
   public function __construct(
+    RequestStack $request,
     AccountProxy $current_user
   ) {
+    $this->currentRequest = $request;
     $this->currentUser = $current_user;
   }
 
   public static function create(ContainerInterface $container) {
     return new static(
+      $container->get('request_stack'),
       $container->get('current_user')
     );
   }
@@ -37,22 +37,31 @@ class SearchSaveForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'search_save_form';
+    return 'search_save_front_form';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['title'] = [
-      '#type' => 'text_format',
-      '#title' => $this->t('Title'),
-      '#description' => $this->t('titre de la recherche'),
+
+    $form['titre'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Titre'),
+      '#description' => $this->t('Titre de la recherche'),
     ];
 
     $form['submit'] = [
         '#type' => 'submit',
         '#value' => $this->t('Submit'),
+				'#attributes' => [
+					'class' => [
+						'btn',
+						'btn-md',
+						'btn-primary',
+						'use-ajax-submit'
+					],
+				],
     ];
 
     return $form;
@@ -70,9 +79,22 @@ class SearchSaveForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Display result.
-    foreach ($form_state->getValues() as $key => $value) {
-        drupal_set_message($key . ': ' . $value);
-    }
+		/*kint();*/
+		if($form_state->getValue('titre')!=""){
+
+			$titre = $form_state->getValue('titre');
+			$user = $this->currentUser->getAccount()->id();
+			$url = $this->currentRequest->getCurrentRequest()->server->get('HTTP_REFERER');
+
+			$query = \Drupal::database()->insert('search_save');
+			$query->fields([
+				'uid' => $user,
+				'url' => $url,
+				'title' => $titre
+			]);
+
+			$query->execute();
+		}
 
   }
 

@@ -1,0 +1,26 @@
+uuid: 74dbb8f3-1478-4954-93f2-423ea2e17e73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geolocation_demo_multiple
+    - node.type.geolocation_default_article
+  enforced:
+    module:
+      - geolocation_demo
+  module:
+    - geolocation
+_core:
+  default_config_hash: uHGm1nBqod957C_dtHdhGzaT3pA9r0vLgTQ3g1jUoP0
+id: node.geolocation_default_article.field_geolocation_demo_multiple
+field_name: field_geolocation_demo_multiple
+entity_type: node
+bundle: geolocation_default_article
+label: 'Geolocation Demo Multiple'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation
