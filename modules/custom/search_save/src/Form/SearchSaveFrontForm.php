@@ -6,7 +6,8 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Session\AccountProxy;
-
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\CloseModalDialogCommand;
 /**
  * Class SearchSaveFrontForm.
  *
@@ -95,7 +96,10 @@ class SearchSaveFrontForm extends FormBase {
 
 			$query->execute();
 		}
+		$form['titre'] = [
 
+			'#default_value' => 'Recherche sauvegardée',
+		];
   }
 
 }
