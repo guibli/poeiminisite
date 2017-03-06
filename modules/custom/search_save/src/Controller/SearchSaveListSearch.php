@@ -47,15 +47,15 @@ class SearchSaveListSearch extends ControllerBase {
 
 		$query = \Drupal::database()
 			->select('search_save','s')
-			->fields('s',array('sid','title'))
+			->fields('s',array('sid','title','url'))
 			->condition('uid', $this->currentUser->getAccount()->id() )
 			->execute();
 
 		$result = $query->fetchAll();
 		$header = array('Titre');
 		foreach ($result as $item) {
-			$sid = $item->sid;
-			$parsed['titre'] = $item->title;
+
+			$parsed['titre'] = Link::fromTextAndUrl($item->title, Url::fromUri($item->url) );
 
 			$url = Url::fromRoute('search_save.listsearchdel',array('sid'=>$item->sid));
 /*			$link_options = array(
@@ -67,7 +67,6 @@ class SearchSaveListSearch extends ControllerBase {
 			);
 			$url->setOptions($link_options);*/
 			$link = Link::fromTextAndUrl(t('Supprimer'), $url )->toString();
-
 
 			$parsed['delete'] = $link;
 			$result_parsed[]=$parsed;
