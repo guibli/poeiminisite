@@ -111,7 +111,7 @@ function multiple_registration_form_field_config_edit_form_alter(&$form, \Drupal
         '#default_value' => $def_val,
         '#options' => $options,
       );
-      $form['actions']['submit']['#submit'][] = 'multiple_registration_field_config_form_submit';
+      $form['actions']['submit']['#validate'][] = 'multiple_registration_field_config_form_submit';
     }
   }
 }
@@ -138,7 +138,7 @@ function multiple_registration_form_user_register_form_alter(&$form, \Drupal\Cor
   $route = $route_match->getRouteName();
   if ($route == 'multiple_registration.role_registration_page') {
     $form['rid'] = array('#type' => 'value', '#value' => $route_match->getParameter('rid'));
-    $form['actions']['submit']['#validate'][] = 'multiple_registration_user_register_form_validate';
+    $form['#validate'][] = 'multiple_registration_user_register_form_validate';
   }
 }
 

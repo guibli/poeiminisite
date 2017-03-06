@@ -10,7 +10,8 @@ dependencies:
 third_party_settings:
   multiple_registration:
     user_additional_register_form:
-      100: '100'
+      particulier: particulier
+      100: 0
       professionnel: 0
 id: user.user.field_prenom
 field_name: field_prenom
@@ -18,7 +19,7 @@ entity_type: user
 bundle: user
 label: Prénom
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

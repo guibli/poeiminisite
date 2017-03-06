@@ -1,0 +1,8 @@
+onglet.view.liste_offre.page_1:
+  path: '/liste-offre'
+  defaults:
+    _titre: 'ma liste offres'
+    _controller: '\Drupal\onglet\Controller\OngletViewListeController::content'
+    node: ''
+  requirements:
+    _access: 'TRUE'

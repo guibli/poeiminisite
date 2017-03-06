@@ -1,2 +1,4 @@
-multiple_registration_path_professionnel: register/Professionnel
+multiple_registration_path_particulier: registration/particulier
+multiple_registration_url_particulier: /user/register/particulier
+multiple_registration_path_professionnel: registration/professionnel
 multiple_registration_url_professionnel: /user/register/professionnel

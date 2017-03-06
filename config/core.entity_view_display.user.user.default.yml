@@ -15,9 +15,7 @@ dependencies:
     - field.field.user.user.field_telephone
     - field.field.user.user.field_type
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - image
     - options
     - user
 _core:
@@ -28,54 +26,46 @@ bundle: user
 mode: default
 content:
   field_adresse:
-    weight: 13
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
   field_civilite:
-    weight: 6
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_denomination:
-    weight: 9
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_description:
-    weight: 10
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-  field_logo:
-    weight: 12
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-  field_nom:
-    weight: 4
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_prenom:
     weight: 5
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_description:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_nom:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_prenom:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_siret:
-    weight: 17
+    weight: 10
     label: above
     settings:
       thousand_separator: ''
@@ -83,14 +73,14 @@ content:
     third_party_settings: {  }
     type: number_integer
   field_site_web:
-    weight: 16
+    weight: 9
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_telephone:
-    weight: 14
+    weight: 8
     label: above
     settings:
       thousand_separator: ''
@@ -100,13 +90,13 @@ content:
     third_party_settings: {  }
     type: number_decimal
   field_type:
-    weight: 3
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   member_for:
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
   profile_particulier:
@@ -117,12 +107,6 @@ content:
     weight: 8
     settings: {  }
     third_party_settings: {  }
-  user_picture:
-    type: image
-    weight: 1
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
-hidden: {  }
+hidden:
+  field_logo: true
+  user_picture: true
