@@ -15,7 +15,7 @@ show_only_one_result: true
 field_identifier: locality
 facet_source_id: 'views_page:recherche_offre__page_1'
 widget:
-  type: checkbox
+  type: links
   config:
     show_numbers: true
     soft_limit: 0
