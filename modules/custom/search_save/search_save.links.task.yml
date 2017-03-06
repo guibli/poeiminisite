@@ -1,0 +1,5 @@
+search_save.listsearch:
+  route_name: search_save.listsearch
+  title: 'Recherche sauvegardées'
+  base_route: entity.user.canonical
+  weight: 100

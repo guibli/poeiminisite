@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.offre.field_meuble
     - field.field.node.offre.field_nombre_de_pieces
+    - field.field.node.offre.field_offre_address
     - field.field.node.offre.field_offre_description
     - field.field.node.offre.field_offre_exclusivite
     - field.field.node.offre.field_offre_lieu
@@ -13,10 +14,10 @@ dependencies:
     - field.field.node.offre.field_offre_surface
     - field.field.node.offre.field_offre_type_de_bien
     - field.field.node.offre.field_type_de_transaction
-    - field.field.node.offre.field_ville
     - image.style.responsive_slideshow_style
     - node.type.offre
   module:
+    - address
     - colorbox
     - geolocation
     - text
@@ -46,6 +47,12 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+  field_offre_address:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
   field_offre_description:
     weight: 7
     label: hidden
@@ -138,13 +145,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-  field_ville:
-    weight: 14
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   links:
     weight: 0
     settings: {  }

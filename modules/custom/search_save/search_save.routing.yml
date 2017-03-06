@@ -6,3 +6,37 @@ search_save.search_save_form:
   requirements:
     _access: 'TRUE'
   
+
+search_save.save_search_form:
+  path: '/admin/config/search_save/savesearch'
+  defaults:
+    _form: '\Drupal\search_save\Form\SaveSearchForm'
+    _title: 'SaveSearchForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+
+search_save.search_save_front_form:
+  path: '/search_save/form/search_save_front'
+  defaults:
+    _form: '\Drupal\search_save\Form\SearchSaveFrontForm'
+    _title: 'Sauvegarde de votre recherche'
+  requirements:
+    _access: 'TRUE'
+  
+search_save.listsearch:
+  path: '/user/{user}/listsearch'
+  defaults:
+    _controller: '\Drupal\search_save\Controller\SearchSaveListSearch::content'
+    _title: 'Recherche sauvegardées'
+  requirements:
+    _permission: 'access content'
+
+search_save.listsearchdel:
+  path: '/search_save/delete/{sid}'
+  defaults:
+    _controller: '\Drupal\search_save\Controller\SearchSaveListSearch::del'
+  requirements:
+    _permission: 'access content'

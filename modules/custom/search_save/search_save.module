@@ -7,6 +7,7 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\views\ViewExecutable;
+
 /**
  * Implements hook_help().
  */
@@ -40,9 +41,29 @@ function search_save_theme() {
  * Check if user is logged.
  *
  */
-function search_save_views_pre_render(ViewExecutable $view)
+function search_save_views_pre_view(ViewExecutable $views, $display_id, array &$args)
 {
-  if($view->id()=='recherche_offre' && $view->current_display == 'page_1'){
-   /* kint($view);*/
+
+	$config = \Drupal::config('search_save.savesearch')->get('view');
+
+	$view = explode(":",$config);
+	$user = get_current_user();
+
+  if($views->id()==$view[0] && $views->current_display == $view[1] && $user !== 0){
+
+			$options = array(
+				'id' => 'search_save',
+				'table' => 'views',
+				'field' => 'area_text_custom',
+				'relationship' => 'none',
+				'group_type' => 'none',
+				'admin_label' => '',
+				'empty' => TRUE,
+				'tokenize' => FALSE,
+				'content' => '<a class="use-ajax" data-dialog-type="modal" 
+													href="/poeiminisite/search_save/form/search_save_front?url=">Sauvegarder la recherche</a>',
+				'plugin_id' => 'text_custom',
+			);
+			$views->setHandler($view[1], 'header', 'search_save', $options);
   }
 }

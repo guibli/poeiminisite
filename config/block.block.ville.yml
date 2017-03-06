@@ -1,0 +1,22 @@
+uuid: bddad212-dd92-496f-843f-7766b9296429
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.ville
+  module:
+    - facets
+  theme:
+    - bootstrap
+id: ville
+theme: bootstrap
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'facet_block:ville'
+settings:
+  id: 'facet_block:ville'
+  label: Ville
+  provider: facets
+  label_display: visible
+visibility: {  }

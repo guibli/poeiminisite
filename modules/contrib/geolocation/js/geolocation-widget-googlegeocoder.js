@@ -706,7 +706,7 @@
           return;
         }
 
-        if (settings.extraData._drupal_ajax && settings.extraData._triggering_element_name === targetField + '[0][country_code]') {
+        if (settings.extraData._drupal_ajax && settings.extraData._triggering_element_name === targetField + '[0][address][country_code]') {
           // Populate the address fields, once they have been added to the DOM.
           addressDetails.find('.organization').val(premise);
           addressDetails.find('.address-line1').val(addressLine1);

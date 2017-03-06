@@ -1,0 +1,22 @@
+uuid: aa9e7586-263c-40c0-a7eb-629e554e37a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.meuble_vide_
+  module:
+    - facets
+  theme:
+    - bartik
+id: meublevide
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:meuble_vide_'
+settings:
+  id: 'facet_block:meuble_vide_'
+  label: 'Meublé / vide '
+  provider: facets
+  label_display: visible
+visibility: {  }

@@ -6,7 +6,7 @@ function search_save_schema(){
     'fields' => array(
       'sid'       => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
       'uid'       => array('type' => 'int', 'not null' => TRUE, 'default' => 0),
-      'url'      => array('type' => 'varchar','length' => 32,'not null' => TRUE, 'default' => ''),
+      'url'      => array('type' => 'text','not null' => TRUE, 'default' => ''),
       'title'     => array('type' => 'varchar','length' => 255,'not null' => TRUE, 'default' => ''),
     ),
     'primary key' => array('sid'),

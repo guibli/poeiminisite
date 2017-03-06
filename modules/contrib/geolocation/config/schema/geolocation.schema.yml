@@ -362,7 +362,7 @@ field.widget.settings.geolocation_googlegeocoder:
       type: string
       label: 'Target address field name'
     explicite_actions_address_field:
-      type: string
+      type: integer
       label: 'Explicite buttons'
     allow_override_map_settings:
       type: integer
