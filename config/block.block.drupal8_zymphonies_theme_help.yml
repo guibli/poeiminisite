@@ -11,7 +11,7 @@ _core:
 id: drupal8_zymphonies_theme_help
 theme: drupal8_zymphonies_theme
 region: highlighted
-weight: -30
+weight: -9
 provider: null
 plugin: help_block
 settings:

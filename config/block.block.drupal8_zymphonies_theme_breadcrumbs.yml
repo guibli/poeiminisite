@@ -11,7 +11,7 @@ _core:
 id: drupal8_zymphonies_theme_breadcrumbs
 theme: drupal8_zymphonies_theme
 region: breadcrumb
-weight: -100
+weight: -9
 provider: null
 plugin: system_breadcrumb_block
 settings:
