@@ -1,18 +1,19 @@
 <?php
 
-namespace Drupal\search_save\Controller;
+namespace Drupal\email_form\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Session\AccountProxy;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\Core\Entity;
 /**
- * Class SearchSaveListSearch.
+ * Class OffreList.
  *
- * @package Drupal\search_save\Controller
+ * @package Drupal\email_form\Controller
  */
-class SearchSaveListSearch extends ControllerBase {
+class OffreList extends ControllerBase {
 
   /**
    * Drupal\Core\Session\AccountProxy definition.
@@ -46,20 +47,27 @@ class SearchSaveListSearch extends ControllerBase {
   public function content() {
 
 		$query = \Drupal::database()
-			->select('search_save','s')
-			->fields('s',array('sid','title','url'))
-			->condition('uid', $this->currentUser->getAccount()->id() )
+			->select('email_form','ef')
+			->fields('ef',array('hid','nid','email'))
+			->condition('email', $this->currentUser->getEmail() )
 			->execute();
 
 		$result = $query->fetchAll();
 		$header = array('Titre');
-		foreach ($result as $item) {
 
-			$parsed['titre'] = Link::fromTextAndUrl($item->title, Url::fromUri($item->url) );
+		$nids =array_column($result,"nid");
+		$node_storage = \Drupal::entityTypeManager()->getStorage('node');
 
-			$url = Url::fromRoute('search_save.listsearchdel',array('sid'=>$item->sid));
+		$node_storage->load($nid);
+
+		$offres = $node_storage->loadMultiple($nids);
+
+		foreach ($offres as $item) {
+			$options = ['absolute' => TRUE];
+			$url_object = Url::fromRoute('entity.node.canonical', ['node' => $item->id()], $options);
+			$parsed['titre'] = Link::fromTextAndUrl($item->getTitle(), $url_object);
+			$url = Url::fromRoute('email_form.offrelistdel',array('nid'=>$item->id()));
 			$link = Link::fromTextAndUrl(t('Supprimer'), $url )->toString();
-
 			$parsed['delete'] = $link;
 			$result_parsed[]=$parsed;
 		}
@@ -73,14 +81,14 @@ class SearchSaveListSearch extends ControllerBase {
 		return $render;
 
   }
-	public function del($sid) {
+	public function del($nid) {
 
 		$query = \Drupal::database()
-			->delete('search_save')
-			->condition('uid', $this->currentUser->getAccount()->id() )
-			->condition('sid', $sid )
+			->delete('email_form')
+			->condition('email', $this->currentUser->getEmail() )
+			->condition('nid', $nid )
 			->execute();
 
-		return $this->redirect('search_save.listsearch',array('user'=>$this->currentUser->id()));
+		return $this->redirect('email_form.offrelist',array('user'=>$this->currentUser->id()));
 	}
 }

@@ -1,0 +1,14 @@
+email_form.offrelist:
+  path: '/user/{user}/listoffre'
+  defaults:
+    _controller: '\Drupal\email_form\Controller\OffreList::content'
+    _title: 'Alerte crées'
+  requirements:
+    _permission: 'access content'
+
+email_form.offrelistdel:
+  path: '/offrelist/delete/{nid}'
+  defaults:
+    _controller: '\Drupal\email_form\Controller\OffreList::del'
+  requirements:
+    _permission: 'access content'
