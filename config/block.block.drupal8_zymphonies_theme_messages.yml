@@ -1,0 +1,22 @@
+uuid: be746d72-02af-4387-a196-5748e41edd84
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal8_zymphonies_theme
+_core:
+  default_config_hash: pL9lPtMNe-Ln-z_ZLAV8YmjeAHjv4u3NEGOxCMC7Eis
+id: drupal8_zymphonies_theme_messages
+theme: drupal8_zymphonies_theme
+region: highlighted
+weight: -9
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
