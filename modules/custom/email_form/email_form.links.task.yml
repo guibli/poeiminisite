@@ -1,0 +1,5 @@
+email_form.offrelist:
+  route_name: email_form.offrelist
+  title: 'Alertes crées'
+  base_route: entity.user.canonical
+  weight: 100

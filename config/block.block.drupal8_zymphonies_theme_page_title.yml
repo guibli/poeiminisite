@@ -1,0 +1,20 @@
+uuid: 7dc9175c-3e9b-4a7d-95d0-83ae45a202bc
+langcode: en
+status: false
+dependencies:
+  theme:
+    - drupal8_zymphonies_theme
+_core:
+  default_config_hash: zi8BYNgxjz5ew8ihNDfnBFXLJ5jCW-UNbCQ3mLUM_kE
+id: drupal8_zymphonies_theme_page_title
+theme: drupal8_zymphonies_theme
+region: '-1'
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
