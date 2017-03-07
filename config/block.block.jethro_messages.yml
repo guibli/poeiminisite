@@ -1,16 +1,16 @@
-uuid: be746d72-02af-4387-a196-5748e41edd84
+uuid: 2a015def-3d08-4be6-8cb7-1827c83c70bb
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - drupal8_zymphonies_theme
+    - jethro
 _core:
-  default_config_hash: pL9lPtMNe-Ln-z_ZLAV8YmjeAHjv4u3NEGOxCMC7Eis
-id: drupal8_zymphonies_theme_messages
-theme: drupal8_zymphonies_theme
-region: highlighted
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: jethro_messages
+theme: jethro
+region: header
 weight: -9
 provider: null
 plugin: system_messages_block

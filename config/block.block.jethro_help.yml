@@ -1,0 +1,22 @@
+uuid: 21db266c-9299-4b6f-a6db-9bc4dd887fba
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - jethro
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: jethro_help
+theme: jethro
+region: header
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

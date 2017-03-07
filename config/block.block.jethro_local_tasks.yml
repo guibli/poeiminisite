@@ -1,0 +1,22 @@
+uuid: deac6c7d-020f-4f73-862e-079c8ff937df
+langcode: en
+status: true
+dependencies:
+  theme:
+    - jethro
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: jethro_local_tasks
+theme: jethro
+region: breadcrumb
+weight: -9
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

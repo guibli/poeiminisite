@@ -1,4 +1,4 @@
-uuid: 80f9d566-3d0b-4412-8e09-3a7ad95fa31e
+uuid: df93b1dd-d71f-4262-a45f-4db4587f5322
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - facets
   theme:
-    - drupal8_zymphonies_theme
-id: typedetransaction
-theme: drupal8_zymphonies_theme
+    - jethro
+id: jethro_typedetransaction_2
+theme: jethro
 region: sidebar_first
-weight: -4
+weight: -5
 provider: null
 plugin: 'facet_block:type_de_transaction'
 settings:

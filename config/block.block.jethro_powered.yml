@@ -1,16 +1,16 @@
-uuid: 2966fc1b-860d-4c5e-a8aa-0589c13138c5
+uuid: 9a88f27b-a146-4914-897c-0d80ed325e7e
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - drupal8_zymphonies_theme
+    - jethro
 _core:
-  default_config_hash: GpUaz7FJXEtQb8SHa8h5OzSPj6RcNds8tOnO1-itpfQ
-id: drupal8_zymphonies_theme_powered
-theme: drupal8_zymphonies_theme
-region: auto_hidden_block
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: jethro_powered
+theme: jethro
+region: footer_bottom
 weight: -9
 provider: null
 plugin: system_powered_by_block

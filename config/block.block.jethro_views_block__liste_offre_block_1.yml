@@ -1,0 +1,24 @@
+uuid: 9a213be4-4095-42f3-9f90-edaf95f73439
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.liste_offre
+  module:
+    - views
+  theme:
+    - jethro
+id: jethro_views_block__liste_offre_block_1
+theme: jethro
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_block:liste_offre-block_1'
+settings:
+  id: 'views_block:liste_offre-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -536,11 +536,7 @@ display:
               enable: false
               settings:
                 update_map: '0'
-          show_raw_locations: 0
-          even_empty: 1
           context_popup_content: ''
-          marker_clusterer: 0
-          marker_clusterer_image_path: ''
           marker_clusterer_styles: ''
           google_map_settings:
             height: 400px

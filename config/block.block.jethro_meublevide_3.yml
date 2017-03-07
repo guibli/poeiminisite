@@ -1,4 +1,4 @@
-uuid: d0cf28c8-8f28-4096-ab31-fcc22b5119da
+uuid: 8720321e-6b8b-42dc-b6fe-ae0d79148cb1
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - facets
   theme:
-    - drupal8_zymphonies_theme
-id: meublevide_2
-theme: drupal8_zymphonies_theme
+    - jethro
+id: jethro_meublevide_3
+theme: jethro
 region: sidebar_first
-weight: -7
+weight: -8
 provider: null
 plugin: 'facet_block:meuble_vide_'
 settings:

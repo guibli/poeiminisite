@@ -1,16 +1,16 @@
-uuid: df13cabe-5dab-4276-876e-259112ed7fc7
+uuid: 654d528d-93e0-49c2-b07c-ff8d7451cc09
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - drupal8_zymphonies_theme
+    - jethro
 _core:
-  default_config_hash: Ge3b4MEySV2QvgdUJ31QrS8HgCK9PCxSYCLVt2mUVoU
-id: drupal8_zymphonies_theme_breadcrumbs
-theme: drupal8_zymphonies_theme
-region: breadcrumb
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: jethro_breadcrumbs
+theme: jethro
+region: header
 weight: -9
 provider: null
 plugin: system_breadcrumb_block

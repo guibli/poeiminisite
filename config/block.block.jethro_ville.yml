@@ -1,4 +1,4 @@
-uuid: 81385e7b-6816-4ebe-8405-4938f9842e5b
+uuid: c0eb8306-d9b3-4c3e-aa77-568d5ecc5ad9
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - facets
   theme:
-    - drupal8_zymphonies_theme
-id: ville_2
-theme: drupal8_zymphonies_theme
+    - jethro
+id: jethro_ville
+theme: jethro
 region: sidebar_first
-weight: -8
+weight: -9
 provider: null
 plugin: 'facet_block:ville'
 settings:

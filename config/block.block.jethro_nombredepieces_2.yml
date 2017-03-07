@@ -1,4 +1,4 @@
-uuid: b44327f6-e5f7-40fa-864e-e937105600bd
+uuid: c935931b-8f97-4a2c-b0e1-faea5e0c7486
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - facets
   theme:
-    - drupal8_zymphonies_theme
-id: nombredepieces
-theme: drupal8_zymphonies_theme
+    - jethro
+id: jethro_nombredepieces_2
+theme: jethro
 region: sidebar_first
-weight: -6
+weight: -7
 provider: null
 plugin: 'facet_block:nombre_de_pieces'
 settings:
