@@ -1,0 +1,33 @@
+name: Jethro
+type: theme
+base theme: classy
+description: Bootsrap Mobile Responsive theme
+package: Core
+# core: 8.x
+libraries:
+  - jethro/jethro-bootstrap
+  - jethro/global-css
+regions:
+  header: 'Header'
+  banner: 'Banner'
+  page_title: 'Page Title'
+  banner_bottom_first: 'Banner First'
+  banner_bottom_second: 'Banner Bottom second'
+  banner_bottom_third: 'Banner Bottom Third'
+  highlighted: 'Highlighted'
+  breadcrumb: 'Breadcrumb'
+  content: 'content'
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  content_highlighted: 'Content Highlighted'
+  footer_top: 'Footer Top'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Fooder Third'
+  footer_bottom: 'Footer Bottom'
+
+# Information added by Drupal.org packaging script on 2016-07-28
+version: '8.x-2.0'
+core: '8.x'
+project: 'jethro'
+datestamp: 1469703559

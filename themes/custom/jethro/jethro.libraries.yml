@@ -1,0 +1,32 @@
+global-css:
+  version: VERSION
+  css:
+    theme:
+     css/font-awesome.min.css: {}
+     css/page.css: {}
+     css/main.css: {}
+  js:
+    js/custom.js: {}
+    js/modernizr.custom.js: {}
+    js/jquery.smooth-scroll.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+jethro-bootstrap:
+  version: 1.x
+  css:
+    theme:
+      includes/bootstrap/css/bootstrap.css: {}
+      includes/bootstrap/css/bootstrap.min.css: {}
+  js:
+    includes/bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
