@@ -1,0 +1,26 @@
+uuid: 13c2bfc3-d8e9-4633-a8b9-7f2c201efe8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - drupal8_zymphonies_theme
+_core:
+  default_config_hash: pfeRZd47hJ6zovBqu3IbYntWmk7cKbyiEufY2IwwglA
+id: drupal8_zymphonies_theme_main_menu
+theme: drupal8_zymphonies_theme
+region: primary_menu
+weight: -9
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+visibility: {  }

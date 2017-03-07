@@ -536,21 +536,32 @@ display:
               enable: false
               settings:
                 update_map: '0'
+          show_raw_locations: 0
+          even_empty: 1
+          context_popup_content: ''
+          marker_clusterer: 0
+          marker_clusterer_image_path: ''
+          marker_clusterer_styles: ''
           google_map_settings:
+            height: 400px
+            width: 100%
             type: ROADMAP
             zoom: '3'
+            maxZoom: 18
+            minZoom: 0
             mapTypeControl: 1
             streetViewControl: 1
             zoomControl: 1
+            rotateControl: 0
+            fullscreenControl: 0
             scrollwheel: 1
             gestureHandling: auto
             draggable: 1
             preferScrollingToZooming: 0
             disableDoubleClickZoom: 0
             style: ''
-            height: 400px
-            width: 100%
             info_auto_display: 0
+            marker_icon_path: ''
             disableAutoPan: 1
       defaults:
         style: false

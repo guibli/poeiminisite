@@ -58,14 +58,6 @@ class SearchSaveListSearch extends ControllerBase {
 			$parsed['titre'] = Link::fromTextAndUrl($item->title, Url::fromUri($item->url) );
 
 			$url = Url::fromRoute('search_save.listsearchdel',array('sid'=>$item->sid));
-/*			$link_options = array(
-				'attributes' => array(
-					'class' => array(
-						'use-ajax',
-					),
-				),
-			);
-			$url->setOptions($link_options);*/
 			$link = Link::fromTextAndUrl(t('Supprimer'), $url )->toString();
 
 			$parsed['delete'] = $link;
