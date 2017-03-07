@@ -6,13 +6,7 @@ dependencies:
     - field.storage.user.user_picture
   module:
     - image
-    - multiple_registration
     - user
-third_party_settings:
-  multiple_registration:
-    user_additional_register_form:
-      100: '100'
-      professionnel: 0
 _core:
   default_config_hash: cL7i1kgJvlJa6H00f0E_fZ2KdD1ag0ASpLts0K-KNII
 id: user.user.user_picture

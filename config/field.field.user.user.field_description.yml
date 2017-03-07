@@ -12,6 +12,7 @@ third_party_settings:
     user_additional_register_form:
       professionnel: professionnel
       100: 0
+      particulier: 0
 id: user.user.field_description
 field_name: field_description
 entity_type: user

@@ -1,0 +1,4 @@
+onglet.view.liste_offre.page_1:
+  route_name: view.liste_offre.page_1
+  base_route: entity.user.canonical
+  title: 'Liste de mes offres'

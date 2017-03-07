@@ -1,0 +1,24 @@
+uuid: b9e83c50-19f6-420d-92f4-4014b186c509
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.liste_offre
+  module:
+    - views
+  theme:
+    - bootstrap
+id: views_block__liste_offre_block_1
+theme: bootstrap
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'views_block:liste_offre-block_1'
+settings:
+  id: 'views_block:liste_offre-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

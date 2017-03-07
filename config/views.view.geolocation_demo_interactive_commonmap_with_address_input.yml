@@ -500,8 +500,15 @@ display:
       style:
         type: maps_common
         options:
+          show_raw_locations: 0
+          even_empty: 1
           geolocation_field: field_geolocation_demo_single
           title_field: title
+          icon_field: none
+          marker_scroll_to_result: 0
+          id_field: none
+          marker_clusterer: 0
+          marker_clusterer_image_path: ''
           dynamic_map:
             enabled: 1
             update_handler: boundary_filter_field_geolocation_demo_single_boundary
