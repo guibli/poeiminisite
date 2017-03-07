@@ -1,4 +1,4 @@
-uuid: cc03ed1c-2acf-4e33-a552-777d7b68d169
+uuid: 13c2bfc3-d8e9-4633-a8b9-7f2c201efe8c
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - jethro
+    - drupal8_zymphonies_theme
 _core:
-  default_config_hash: GT_zYl7I9VAILH8OxMRe-VDvFadCDHxRcnmBc5xEmf0
-id: jethro_main_menu
-theme: jethro
-region: header
-weight: -8
+  default_config_hash: pfeRZd47hJ6zovBqu3IbYntWmk7cKbyiEufY2IwwglA
+id: drupal8_zymphonies_theme_main_menu
+theme: drupal8_zymphonies_theme
+region: primary_menu
+weight: -9
 provider: null
 plugin: 'system_menu_block:main'
 settings:

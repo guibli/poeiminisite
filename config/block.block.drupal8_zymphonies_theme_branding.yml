@@ -1,17 +1,17 @@
-uuid: 7bfe304d-380f-4bb0-8a36-6094cf2ed46b
+uuid: 396667e6-eb79-442c-9707-9eed2100f30e
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - jethro
+    - drupal8_zymphonies_theme
 _core:
-  default_config_hash: Cy3vkpYrD1O5JG-BeEnokF0bByHYDEa8CBfWivB4_SQ
-id: jethro_branding
-theme: jethro
+  default_config_hash: I1mVPaNy2HynGDxN6quW2alTxwh2wpLrepeJZEQb5ww
+id: drupal8_zymphonies_theme_branding
+theme: drupal8_zymphonies_theme
 region: header
-weight: -5
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:

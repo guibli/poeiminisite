@@ -1,0 +1,22 @@
+uuid: 47496a7d-496b-4ef5-a86b-ae90ec6175f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.ville
+  module:
+    - facets
+  theme:
+    - drupal8_zymphonies_theme
+id: drupal8_zymphonies_theme_ville
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'facet_block:ville'
+settings:
+  id: 'facet_block:ville'
+  label: Ville
+  provider: facets
+  label_display: visible
+visibility: {  }

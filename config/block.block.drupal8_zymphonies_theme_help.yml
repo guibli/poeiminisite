@@ -1,0 +1,22 @@
+uuid: 745fe469-5f07-4c68-81c3-ccf033be22fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - drupal8_zymphonies_theme
+_core:
+  default_config_hash: Un8sX1XhL9SINI_rE_YXDFHzdCDZr54OQHROhScyZXo
+id: drupal8_zymphonies_theme_help
+theme: drupal8_zymphonies_theme
+region: highlighted
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

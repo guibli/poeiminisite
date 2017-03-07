@@ -1,0 +1,22 @@
+uuid: 4bde4ac5-2356-4370-a433-01ded76c58f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.nombre_de_pieces
+  module:
+    - facets
+  theme:
+    - drupal8_zymphonies_theme
+id: drupal8_zymphonies_theme_nombredepieces_2
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'facet_block:nombre_de_pieces'
+settings:
+  id: 'facet_block:nombre_de_pieces'
+  label: 'Nombre de pièces'
+  provider: facets
+  label_display: visible
+visibility: {  }
