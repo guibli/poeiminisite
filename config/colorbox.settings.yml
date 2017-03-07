@@ -1,6 +1,6 @@
 custom:
-  style: stockholmsyndrome
-  activate: 0
+  style: example1
+  activate: 1
   transition_type: elastic
   transition_speed: 350
   opacity: 0.85

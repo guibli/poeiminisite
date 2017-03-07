@@ -11,7 +11,7 @@ _core:
 id: jethro_help
 theme: jethro
 region: header
-weight: -9
+weight: -8
 provider: null
 plugin: help_block
 settings:

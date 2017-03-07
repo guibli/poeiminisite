@@ -101,6 +101,7 @@ content:
     third_party_settings: {  }
     type: number
 hidden:
+  field_type: true
   language: true
   timezone: true
   user_picture: true

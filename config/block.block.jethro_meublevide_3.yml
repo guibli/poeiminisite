@@ -6,6 +6,7 @@ dependencies:
     - facets.facet.meuble_vide_
   module:
     - facets
+    - system
   theme:
     - jethro
 id: jethro_meublevide_3
@@ -19,4 +20,9 @@ settings:
   label: 'Meublé / vide '
   provider: facets
   label_display: visible
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/recherche-offre*'
+    negate: false
+    context_mapping: {  }

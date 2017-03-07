@@ -1,0 +1,28 @@
+uuid: 0504f70c-107a-4be9-9ad4-1be32a8771d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_type
+  module:
+    - multiple_registration
+    - options
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form:
+      professionnel: professionnel
+      100: 0
+      particulier: 0
+id: user.user.field_type
+field_name: field_type
+entity_type: user
+bundle: user
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

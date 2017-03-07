@@ -7,6 +7,11 @@ dependencies:
   module:
     - image
     - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form:
+      professionnel: professionnel
+      100: 0
 id: user.user.field_logo
 field_name: field_logo
 entity_type: user

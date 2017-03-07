@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.offre.field_meuble
     - field.field.node.offre.field_nombre_de_pieces
+    - field.field.node.offre.field_offre_address
     - field.field.node.offre.field_offre_description
     - field.field.node.offre.field_offre_exclusivite
     - field.field.node.offre.field_offre_lieu
@@ -14,8 +15,12 @@ dependencies:
     - field.field.node.offre.field_offre_surface
     - field.field.node.offre.field_offre_type_de_bien
     - field.field.node.offre.field_type_de_transaction
+    - image.style.colorbox_off
     - node.type.offre
   module:
+    - address
+    - colorbox
+    - text
     - user
 _core:
   default_config_hash: AvbvLd8pfStSTn5gVisq_coRFlUco9g5rhwCvl_C2VE
@@ -24,19 +29,57 @@ targetEntityType: node
 bundle: offre
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_offre_address:
+    type: address_default
+    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_offre_description:
+    type: text_trimmed
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+  field_offre_photos:
+    type: colorbox
+    weight: 0
+    label: hidden
+    settings:
+      colorbox_node_style: colorbox_off
+      colorbox_node_style_first: large
+      colorbox_image_style: ''
+      colorbox_gallery: field_post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+  field_offre_prix:
+    type: number_decimal
+    weight: 4
+    label: hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_offre_surface:
+    type: number_integer
+    weight: 3
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
 hidden:
+  addtoany: true
   field_meuble: true
   field_nombre_de_pieces: true
-  field_offre_description: true
   field_offre_exclusivite: true
   field_offre_lieu: true
-  field_offre_photos: true
-  field_offre_prix: true
-  field_offre_surface: true
   field_offre_type_de_bien: true
   field_type_de_transaction: true
+  links: true
   reusable_form: true

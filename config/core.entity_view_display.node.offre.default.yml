@@ -14,7 +14,7 @@ dependencies:
     - field.field.node.offre.field_offre_surface
     - field.field.node.offre.field_offre_type_de_bien
     - field.field.node.offre.field_type_de_transaction
-    - image.style.responsive_slideshow_style
+    - image.style.thumbnail
     - node.type.offre
   module:
     - address
@@ -35,21 +35,21 @@ content:
     third_party_settings: {  }
   field_meuble:
     weight: 13
-    label: inline
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_nombre_de_pieces:
     weight: 12
-    label: inline
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_offre_address:
     weight: 101
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
@@ -61,7 +61,7 @@ content:
     type: text_default
   field_offre_exclusivite:
     weight: 2
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -70,7 +70,7 @@ content:
     type: boolean
   field_offre_lieu:
     weight: 9
-    label: above
+    label: hidden
     settings:
       title: ''
       set_marker: '1'
@@ -104,7 +104,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      colorbox_node_style: responsive_slideshow_style
+      colorbox_node_style: thumbnail
       colorbox_node_style_first: responsive_slideshow_style
       colorbox_image_style: ''
       colorbox_gallery: field_post
@@ -115,7 +115,7 @@ content:
     type: colorbox
   field_offre_prix:
     weight: 4
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -125,7 +125,7 @@ content:
     type: number_decimal
   field_offre_surface:
     weight: 5
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -133,14 +133,14 @@ content:
     type: number_integer
   field_offre_type_de_bien:
     weight: 10
-    label: inline
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_type_de_transaction:
     weight: 11
-    label: inline
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }

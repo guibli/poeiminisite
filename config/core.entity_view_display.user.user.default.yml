@@ -100,4 +100,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_logo: true
+  field_type: true
   user_picture: true

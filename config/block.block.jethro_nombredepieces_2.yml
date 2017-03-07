@@ -6,6 +6,7 @@ dependencies:
     - facets.facet.nombre_de_pieces
   module:
     - facets
+    - system
   theme:
     - jethro
 id: jethro_nombredepieces_2
@@ -19,4 +20,9 @@ settings:
   label: 'Nombre de pièces'
   provider: facets
   label_display: visible
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/recherche-offre*'
+    negate: false
+    context_mapping: {  }

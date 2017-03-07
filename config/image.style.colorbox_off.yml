@@ -1,0 +1,14 @@
+uuid: 1cb224ae-0e4e-4f75-a3cf-afd02d78b626
+langcode: en
+status: true
+dependencies: {  }
+name: colorbox_off
+label: colorbox_off
+effects:
+  efc245cd-9a54-4c47-8294-39ff8d5e5198:
+    uuid: efc245cd-9a54-4c47-8294-39ff8d5e5198
+    id: image_resize
+    weight: 1
+    data:
+      width: 1
+      height: 1

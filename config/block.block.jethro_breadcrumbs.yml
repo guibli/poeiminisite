@@ -11,7 +11,7 @@ _core:
 id: jethro_breadcrumbs
 theme: jethro
 region: header
-weight: -10
+weight: -9
 provider: null
 plugin: system_breadcrumb_block
 settings:
