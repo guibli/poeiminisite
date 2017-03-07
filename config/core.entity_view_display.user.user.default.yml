@@ -13,7 +13,6 @@ dependencies:
     - field.field.user.user.field_siret
     - field.field.user.user.field_site_web
     - field.field.user.user.field_telephone
-    - field.field.user.user.field_type
     - field.field.user.user.user_picture
   module:
     - options
@@ -80,21 +79,13 @@ content:
     third_party_settings: {  }
     type: string
   field_telephone:
-    weight: 8
+    weight: 11
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
-  field_type:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
+    type: number_integer
   member_for:
     weight: 0
     settings: {  }

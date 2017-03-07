@@ -1,4 +1,4 @@
-uuid: cb49defa-7712-42aa-8b10-ccb446a59bad
+uuid: 181b19dc-5070-4b2f-b099-99daaacf4ef5
 langcode: en
 status: false
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - jethro
+    - drupal8_zymphonies_theme
 _core:
   default_config_hash: f3Dd5TnUiFDjFZp9yEGJInwt6cUzs7O6SvLTFTATSlU
-id: jethro_tools
-theme: jethro
+id: drupal8_zymphonies_theme_tools
+theme: drupal8_zymphonies_theme
 region: '-1'
 weight: -7
 provider: null

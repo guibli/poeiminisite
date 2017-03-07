@@ -1,0 +1,22 @@
+uuid: d0cf28c8-8f28-4096-ab31-fcc22b5119da
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.meuble_vide_
+  module:
+    - facets
+  theme:
+    - drupal8_zymphonies_theme
+id: meublevide_2
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'facet_block:meuble_vide_'
+settings:
+  id: 'facet_block:meuble_vide_'
+  label: 'Meublé / vide '
+  provider: facets
+  label_display: visible
+visibility: {  }

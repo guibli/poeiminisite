@@ -1,15 +1,15 @@
-uuid: 3b5a4347-6e15-4009-af27-c70009217bb0
+uuid: c022f1f8-dd41-4f5f-9f72-11d334be83e1
 langcode: en
 status: true
 dependencies:
   module:
     - devel
   theme:
-    - jethro
-id: jethro_switchuser
-theme: jethro
+    - drupal8_zymphonies_theme
+id: drupal8_zymphonies_theme_switchuser
+theme: drupal8_zymphonies_theme
 region: footer_first
-weight: -10
+weight: 0
 provider: null
 plugin: devel_switch_user
 settings:

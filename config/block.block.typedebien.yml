@@ -1,0 +1,22 @@
+uuid: cd2d36ba-c115-402d-bb87-eddfda8d5587
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type_de_bien
+  module:
+    - facets
+  theme:
+    - drupal8_zymphonies_theme
+id: typedebien
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:type_de_bien'
+settings:
+  id: 'facet_block:type_de_bien'
+  label: 'Type de bien'
+  provider: facets
+  label_display: visible
+visibility: {  }

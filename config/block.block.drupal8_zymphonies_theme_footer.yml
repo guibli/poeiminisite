@@ -1,4 +1,4 @@
-uuid: 35282eb4-b4ce-4b53-b73f-488610b9926c
+uuid: d9063386-b97f-4852-87c6-8ee9f02c43b8
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - jethro
+    - drupal8_zymphonies_theme
 _core:
-  default_config_hash: h06zhb3xV9_2_3Zy9NsyylL7YBaEDlMwMEqNwAn8kMo
-id: jethro_footer
-theme: jethro
-region: footer_first
-weight: -9
+  default_config_hash: EqwG5dMtA9YvbNF3MaYQwRdEuJIb1sTAjZzN0PbZOAs
+id: drupal8_zymphonies_theme_footer
+theme: drupal8_zymphonies_theme
+region: footer_menu
+weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

@@ -1,0 +1,22 @@
+uuid: 7f19f5d2-441f-4613-bb75-caa27e4e3148
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type_de_transaction
+  module:
+    - facets
+  theme:
+    - drupal8_zymphonies_theme
+id: drupal8_zymphonies_theme_typedetransaction_2
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:type_de_transaction'
+settings:
+  id: 'facet_block:type_de_transaction'
+  label: 'Type de transaction'
+  provider: facets
+  label_display: visible
+visibility: {  }

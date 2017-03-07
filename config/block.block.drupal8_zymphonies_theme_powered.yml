@@ -1,0 +1,22 @@
+uuid: 2966fc1b-860d-4c5e-a8aa-0589c13138c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal8_zymphonies_theme
+_core:
+  default_config_hash: GpUaz7FJXEtQb8SHa8h5OzSPj6RcNds8tOnO1-itpfQ
+id: drupal8_zymphonies_theme_powered
+theme: drupal8_zymphonies_theme
+region: auto_hidden_block
+weight: -9
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

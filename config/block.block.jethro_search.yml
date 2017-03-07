@@ -10,7 +10,7 @@ _core:
   default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
 id: jethro_search
 theme: jethro
-region: header
+region: '-1'
 weight: -8
 provider: null
 plugin: search_form_block
