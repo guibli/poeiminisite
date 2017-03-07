@@ -1,5 +1,5 @@
 socialicon_count: '5'
-slideshow_count: '5'
+slideshow_count: '3'
 slideshow_display: 1
 _core:
   default_config_hash: xagp8nuL4woImlRj8AcE_BMnSbVz3o9yH5zcF9Q8iYU
@@ -23,14 +23,17 @@ social_url_4: ''
 social_class_5: ''
 social_url_5: ''
 slide_description_1: ''
-slide_image_1: {  }
-slide_url_1: ''
+slide_image_1:
+  - '177'
+slide_url_1: /recherche-offre
 slide_description_2: ''
-slide_image_2: {  }
-slide_url_2: ''
+slide_image_2:
+  - '181'
+slide_url_2: /recherche-offre
 slide_description_3: ''
-slide_image_3: {  }
-slide_url_3: ''
+slide_image_3:
+  - '182'
+slide_url_3: /recherche-offre
 slide_description_4: ''
 slide_image_4: {  }
 slide_url_4: ''

@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_offre_photos
-    - image.style.thumbnail
+    - image.style.colorbox_off
     - search_api.index.offre
     - system.menu.main
   module:
-    - image
+    - colorbox
     - search_api
 id: recherche_offre
 label: 'Recherche offre'
@@ -196,10 +196,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: colorbox
           settings:
-            image_style: thumbnail
-            image_link: content
+            colorbox_node_style: colorbox_off
+            colorbox_node_style_first: thumbnail
+            colorbox_image_style: ''
+            colorbox_gallery: post
+            colorbox_gallery_custom: ''
+            colorbox_caption: auto
+            colorbox_caption_custom: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -208,7 +213,7 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ', '
+          separator: ''
           field_api_classes: false
           field_rendering: true
           fallback_handler: search_api
