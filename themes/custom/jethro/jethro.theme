@@ -13,7 +13,7 @@ use Drupal\Component\Utility\SafeMarkup;
 use Drupal\file\Plugin\Core\Entity\FileInterface;
 use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Path\AliasManager;
-
+use Drupal\image\Entity\ImageStyle;
 /**
  * @file
  * Functions to support theming in the beginning theme.
@@ -78,8 +78,8 @@ function jethro_preprocess_page(&$variables) {
       $fid = theme_get_setting("slide_image_{$i}", "jethro");
       if (!empty($fid)) {
         $file = \Drupal\file\Entity\File::load($fid[0]);
-        $uri = $file->getFileUri();
-        $image_path = file_create_url($uri);
+				$image_uri = ImageStyle::load('responsive_slideshow_style')->buildUrl($file->getFileUri());
+        $image_path = file_create_url($image_uri);
       }
       else {
         $image_path = THEME_PATH . "/images/slide-{$i}.jpg";
