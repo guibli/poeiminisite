@@ -1,0 +1,11 @@
+uuid: 237a0a1e-e47c-4148-b20f-c04ef26e527d
+langcode: en
+status: true
+dependencies: {  }
+id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+label: 'http://default/'
+chunks: 1
+links: 1
+max_filesize: 270
+context: {  }
+updated: 1489051705

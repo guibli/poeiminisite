@@ -1,6 +1,6 @@
 uuid: 3b5a4347-6e15-4009-af27-c70009217bb0
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - devel
@@ -8,7 +8,7 @@ dependencies:
     - jethro
 id: jethro_switchuser
 theme: jethro
-region: footer_first
+region: '-1'
 weight: -10
 provider: null
 plugin: devel_switch_user

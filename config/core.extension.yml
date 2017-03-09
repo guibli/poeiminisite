@@ -43,6 +43,7 @@ module:
   link: 0
   liste: 0
   menu_ui: 0
+  metatag: 0
   multiple_registration: 0
   node: 0
   options: 0
@@ -53,7 +54,6 @@ module:
   responsive_image: 0
   responsive_slideshow: 0
   reusable_forms: 0
-  search: 0
   search_api: 0
   search_api_db: 0
   search_api_views_taxonomy: 0
@@ -63,6 +63,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
@@ -73,6 +74,7 @@ module:
   webform: 0
   webprofiler: 0
   menu_link_content: 1
+  xmlsitemap: 1
   views: 10
   paragraphs: 11
   standard: 1000

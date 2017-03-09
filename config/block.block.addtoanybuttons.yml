@@ -1,0 +1,20 @@
+uuid: 133a8e5c-bd46-4748-85ca-127f42075c79
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+  theme:
+    - jethro
+id: addtoanybuttons
+theme: jethro
+region: footer_third
+weight: 0
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'AddToAny buttons'
+  provider: addtoany
+  label_display: '0'
+visibility: {  }
