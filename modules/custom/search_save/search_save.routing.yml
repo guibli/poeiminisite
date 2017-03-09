@@ -15,7 +15,7 @@ search_save.search_save_front_form:
     _form: '\Drupal\search_save\Form\SearchSaveFrontForm'
     _title: 'Sauvegarde de votre recherche'
   requirements:
-    _access: 'TRUE'
+    _permission: 'access content'
   
 search_save.listsearch:
   path: '/user/{user}/listsearch'
