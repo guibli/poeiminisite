@@ -95,7 +95,9 @@
     <footer class="node__meta">
       {{ author_picture }}
       <div{{ author_attributes.addClass('node__submitted') }}>
+          {% if user_is_logged_in() %}
         {% trans %}Contacter l'annonceur {{ author_name }}{% endtrans %}
+          {% endif %}
         {{ metadata }}
       </div>
     </footer>
