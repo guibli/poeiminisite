@@ -3,6 +3,8 @@ module:
   addtoany: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  analytics: 0
+  analytics_google: 0
   automated_cron: 0
   block: 0
   block_content: 0
@@ -22,7 +24,6 @@ module:
   dblog: 0
   devel: 0
   devel_generate: 0
-  dynamic_page_cache: 0
   editor: 0
   email_form: 0
   entity: 0
@@ -51,7 +52,6 @@ module:
   multiple_registration: 0
   node: 0
   options: 0
-  page_cache: 0
   path: 0
   quickedit: 0
   rdf: 0
