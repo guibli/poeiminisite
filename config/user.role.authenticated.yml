@@ -18,3 +18,4 @@ permissions:
   - 'access shortcuts'
   - 'search content'
   - 'access user profiles'
+  - 'access user contact forms'
