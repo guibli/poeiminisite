@@ -8,7 +8,6 @@ search_save.save_search_form:
   options:
     _admin_route: TRUE
 
-
 search_save.search_save_front_form:
   path: '/search_save/form/search_save_front'
   defaults:

@@ -45,7 +45,8 @@ class SearchSaveFrontForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-
+		$form['#prefix'] = '<div id="my-form-wrapper-id">';
+		$form['#suffix'] = '</div>';
     $form['titre'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Titre'),
@@ -63,7 +64,11 @@ class SearchSaveFrontForm extends FormBase {
 						'use-ajax-submit'
 					],
 				],
+			'#ajax' => [
+				'wrapper' => 'my-form-wrapper-id',
+			]
     ];
+
 
     return $form;
   }
@@ -80,7 +85,7 @@ class SearchSaveFrontForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Display result.
-		/*kint();*/
+
 		if($form_state->getValue('titre')!=""){
 
 			$titre = $form_state->getValue('titre');
