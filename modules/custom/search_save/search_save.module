@@ -47,9 +47,9 @@ function search_save_views_pre_view(ViewExecutable $views, $display_id, array &$
 	$config = \Drupal::config('search_save.savesearch')->get('view');
 
 	$view = explode(":",$config);
-	$user = get_current_user();
+	$current_user = \Drupal::currentUser();
 
-  if($views->id()==$view[0] && $views->current_display == $view[1] && $user !== 0){
+  if($views->id()==$view[0] && $views->current_display == $view[1] && $current_user->id() != 0){
 
 			$options = array(
 				'id' => 'search_save',
