@@ -67,3 +67,13 @@ function search_save_views_pre_view(ViewExecutable $views, $display_id, array &$
 			$views->setHandler($view[1], 'header', 'search_save', $options);
   }
 }
+
+
+/**
+ * Implementation of hook_menu_local_tasks_alter()
+ */
+function search_save_menu_local_tasks_alter(&$data, $router_item, $root_path){
+	if($data['tabs'][0]['user.register']){
+		unset($data['tabs'][0]['user.register']);
+	}
+}
