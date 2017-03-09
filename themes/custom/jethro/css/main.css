@@ -786,11 +786,11 @@ p > tag {
   font-size: 1em;
 }
 .navbar-default .navbar-nav>li>a {
-  background-color: #edac15;
-  color: #fff;
-  text-transform: uppercase;
-  padding-bottom: 10px;
-  padding-top: 10px;
+    /* background-color: #edac15; */
+    color: #2c3e50;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:active,
