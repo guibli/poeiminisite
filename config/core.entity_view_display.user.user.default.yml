@@ -13,6 +13,7 @@ dependencies:
     - field.field.user.user.field_siret
     - field.field.user.user.field_site_web
     - field.field.user.user.field_telephone
+    - field.field.user.user.field_type
     - field.field.user.user.user_picture
   module:
     - options
@@ -101,4 +102,5 @@ content:
 hidden:
   field_logo: true
   field_type: true
+  langcode: true
   user_picture: true

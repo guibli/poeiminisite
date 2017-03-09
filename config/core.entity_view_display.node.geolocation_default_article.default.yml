@@ -49,4 +49,6 @@ content:
     type: entity_reference_label
   links:
     weight: 100
-hidden: {  }
+hidden:
+  addtoany: true
+  langcode: true

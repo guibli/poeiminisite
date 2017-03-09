@@ -20,6 +20,8 @@ content:
   links:
     weight: 10
 hidden:
+  addtoany: true
   field_body_desc: true
   field_slide_teaser: true
   field_slideshow_image: true
+  langcode: true

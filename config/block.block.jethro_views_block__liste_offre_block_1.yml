@@ -6,6 +6,7 @@ dependencies:
     - views.view.liste_offre
   module:
     - system
+    - user
     - views
   theme:
     - jethro
@@ -25,6 +26,14 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/user/*'
-    negate: false
+    pages: "/user/login\r\n/home"
+    negate: true
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      professionnel: professionnel
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

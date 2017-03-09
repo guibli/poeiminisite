@@ -13,6 +13,7 @@ dependencies:
     - field.field.user.user.field_siret
     - field.field.user.user.field_site_web
     - field.field.user.user.field_telephone
+    - field.field.user.user.field_type
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -102,6 +103,7 @@ content:
     type: number
 hidden:
   field_type: true
+  langcode: true
   language: true
   timezone: true
   user_picture: true
