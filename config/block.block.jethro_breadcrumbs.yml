@@ -11,7 +11,7 @@ _core:
 id: jethro_breadcrumbs
 theme: jethro
 region: header
-weight: -9
+weight: -10
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -19,4 +19,9 @@ settings:
   label: Breadcrumbs
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
