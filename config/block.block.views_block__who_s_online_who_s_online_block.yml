@@ -1,0 +1,24 @@
+uuid: b585e99f-fb1d-4cde-a3c0-a7c9b2052934
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.who_s_online
+  module:
+    - views
+  theme:
+    - jethro
+id: views_block__who_s_online_who_s_online_block
+theme: jethro
+region: footer_second
+weight: 0
+provider: null
+plugin: 'views_block:who_s_online-who_s_online_block'
+settings:
+  id: 'views_block:who_s_online-who_s_online_block'
+  label: 'Membres connectés '
+  provider: views
+  label_display: visible
+  views_label: 'Membres connectés '
+  items_per_page: none
+visibility: {  }

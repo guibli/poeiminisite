@@ -81,5 +81,6 @@ hidden:
   field_offre_lieu: true
   field_offre_type_de_bien: true
   field_type_de_transaction: true
+  langcode: true
   links: true
   reusable_form: true

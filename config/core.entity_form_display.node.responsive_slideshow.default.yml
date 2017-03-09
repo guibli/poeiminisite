@@ -46,6 +46,11 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 100
   path:

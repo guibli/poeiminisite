@@ -34,16 +34,20 @@ module:
   filter: 0
   geolocation: 0
   geolocation_demo: 0
+  hal: 0
   help: 0
   history: 0
   honeypot: 0
   image: 0
   image_effects: 0
   kint: 0
+  language: 0
   link: 0
   liste: 0
   menu_ui: 0
   metatag: 0
+  metatag_favicons: 0
+  metatag_mobile: 0
   multiple_registration: 0
   node: 0
   options: 0
@@ -53,12 +57,13 @@ module:
   rdf: 0
   responsive_image: 0
   responsive_slideshow: 0
+  rest: 0
   reusable_forms: 0
   search_api: 0
   search_api_db: 0
   search_api_views_taxonomy: 0
   search_save: 0
-  shortcut: 0
+  serialization: 0
   system: 0
   taxonomy: 0
   telephone: 0
@@ -66,6 +71,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  twig_extender: 0
   update: 0
   user: 0
   views_slideshow: 0
