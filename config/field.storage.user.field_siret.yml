@@ -1,4 +1,4 @@
-uuid: acbfba9f-0f82-4eba-9911-2aa0afc7c132
+uuid: 7e613d05-4035-49ba-ad29-439bbfd5a40b
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,11 @@ dependencies:
 id: user.field_siret
 field_name: field_siret
 entity_type: user
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 14
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

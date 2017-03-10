@@ -1,4 +1,4 @@
-uuid: 36b157d2-b173-451a-aabe-72e83cfa0b71
+uuid: c63cb25e-d96a-43c9-b006-41e2c89b1118
 langcode: en
 status: true
 dependencies:
@@ -21,11 +21,9 @@ label: Téléphone
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: xx.xx.xx.xx.xx
 default_value_callback: ''
-settings:
-  min: null
-  max: null
-  prefix: ''
-  suffix: ''
-field_type: integer
+settings: {  }
+field_type: string

@@ -11,9 +11,7 @@ dependencies:
     - field.field.user.user.field_logo
     - field.field.user.user.field_nom
     - field.field.user.user.field_prenom
-    - field.field.user.user.field_siret
     - field.field.user.user.field_site_web
-    - field.field.user.user.field_telephone
     - field.field.user.user.field_type
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -43,9 +41,7 @@ hidden:
   field_logo: true
   field_nom: true
   field_prenom: true
-  field_siret: true
   field_site_web: true
-  field_telephone: true
   field_type: true
   langcode: true
   member_for: true

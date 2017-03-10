@@ -83,11 +83,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_siret:
-    weight: 1
+    weight: 14
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
+    type: string_textfield
   field_site_web:
     weight: 6
     settings:
@@ -98,9 +99,10 @@ content:
   field_telephone:
     weight: 13
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: number
+    type: string_textfield
 hidden:
   field_type: true
   langcode: true

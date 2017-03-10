@@ -65,13 +65,12 @@ content:
     third_party_settings: {  }
     type: string
   field_siret:
-    weight: 10
+    weight: 11
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_integer
+    type: string
   field_site_web:
     weight: 9
     label: above
@@ -80,13 +79,12 @@ content:
     third_party_settings: {  }
     type: string
   field_telephone:
-    weight: 11
+    weight: 10
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: number_integer
+    type: string
   member_for:
     weight: 0
     settings: {  }

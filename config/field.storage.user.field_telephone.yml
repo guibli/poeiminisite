@@ -1,4 +1,4 @@
-uuid: b4247e81-b4d5-4a20-a5cd-b81b2ab93eea
+uuid: 77a78d7b-3af6-40f5-b694-2d00b8e604d5
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,11 @@ dependencies:
 id: user.field_telephone
 field_name: field_telephone
 entity_type: user
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 14
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1
